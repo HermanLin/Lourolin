@@ -1,0 +1,41 @@
+#Team Luorolin
+#APCS1 - pd4
+#Herman Lin, Edward Luo, Edward Ro
+#To-Do List
+
+(?) = needs further review
+
+===MVP===
+1) Make driver file Woo.java
+2) Develop Game.java and Character.java	
+		~ Game.java runs the main show
+		~ Character.java allows the creation of the player and his/her family
+		~ Implement Game.java and Character.java into Woo.java accordingly 
+3) Develop Player.java
+		~ Subclass of Character.java
+		~ Stores supply variables needed throughout gameplay
+		~ Implement Player.java into Game.java accordingly
+4) Develop the main game loop
+		~ Be able to change each family member's "stats"
+		~ Be able to change supply variables accordingly
+			- e.g Food goes down by 5
+5) Develop random occurrences
+		~ Illnesses that affect family member's health
+		~ Bandits (?) that steal supplies
+		~ Wagon parts breaking down
+6) Develop rest of Game.java functionality
+		~ Trading
+		~ Checking supplies
+		~ Checking family stats/conditions
+		~ Resting
+		~ Hunting (?)
+
+===Update 1.1===
+7) Develop Town.java
+		~ Several locations that the player can reach 
+8) Develop Store.java
+		~ Where the player can buy more supplies
+		~ Located at the Towns/Landmarks
+		~ Implement Store.java into Town.java
+
+***Further DLCs forthcoming
