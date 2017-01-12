@@ -6,23 +6,6 @@ pd 4
 ---------------------
 Oregon Trail
 
-
-Suggested usage: 
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -59,9 +42,29 @@ tales of wisdom gained...
 ==============================================================
 
 
-2017-1-11
+2017-01-11
 --------------------------------------------------------------
-Hermano :: Wrote/edited proposal. Created UML diagram. Created flowchart.
-Eduardo :: Wrote/edited proposal. Created UML diagram. Created flowchart.
-Eddy :: Wrote/edited proposal. Created UML diagram. Created flowchart.
+Hermano, Eduardo, Eddy :: Wrote/edited proposal. Created UML diagram. Created flowchart.
+==============================================================
+
+2017-01-12
+--------------------------------------------------------------
+Hermano, Eduardo :: Organized work flow. Hashed out nuances.
+Hermano :: Worked on Game.java in conjunction with Eddy working on Character.java.
+Eduardo :: Fixed devlog/added to it, assisted Hermano and Eddy with and edited Game.java, Character.java, and Player.java (java syntax and concept issues).
+Eddy :: Worked on Character.java, Player.java in conjunction with Hermano working on Game.java.
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
 ==============================================================
