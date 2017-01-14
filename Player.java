@@ -19,7 +19,7 @@ public class Player extends Character {
 	name = x;
 	HP = 100;
 	condition = 0;
-	money = 1600;
+	money = 1500;
     }
 
     //======================
@@ -47,22 +47,41 @@ public class Player extends Character {
     //=====================
     //===Mutator Methods===
     //=====================
-    public void setFood( int input ) {
-	food = input;
+    public void addFood( int input ) {
+	food += input;
     }
-    public void setAmmo( int input ) {
-	ammo = input;
+    public void addAmmo( int input ) {
+	ammo += input;
     }
-    public void setWheels( int input ) {
-	wheels = input;
+    public void addWheels( int input ) {
+	wheels += input;
     }
-    public void setAxels( int input ) {
-	axels = input;
+    public void addAxels( int input ) {
+	axels += input;
     }
-    public void setTongues( int input ) {
-	tongues = input;
+    public void addTongues( int input ) {
+	tongues += input;
     }
-    public void setMoney( int input ) {
-	money = input;
+    public void addMoney( int input ) {
+	money += input;
+    }
+
+    public void subFood( int input ) {
+	food -= input;
+    }
+    public void subAmmo( int input ) {
+	ammo -= input;
+    }
+    public void subWheels( int input ) {
+	wheels -= input;
+    }
+    public void subAxels( int input ) {
+	axels -= input;
+    }
+    public void subTongues( int input ) {
+	tongues -= input;
+    }
+    public void subMoney( int input ) {
+	money -= input;
     }
 }

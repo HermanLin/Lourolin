@@ -52,7 +52,7 @@ public class Supplies {
 	//if ( ( storeInt >= 0 ) && ( storeInt <= Family.john.getMoney() ) ) {}
     }
 
-    public static void buyAmmo() {
+    public static void buyAmmo() {	
 
     }
 
