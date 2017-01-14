@@ -55,9 +55,9 @@ Eduardo :: Fixed devlog/added to it, assisted Hermano and Eddy with and edited G
 Eddy :: Worked on Character.java, Player.java in conjunction with Hermano working on Game.java.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-14
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Hermano :: Moved makeChar() and chooseSupplies() into separate class files, created Family.java
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
