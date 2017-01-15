@@ -17,6 +17,8 @@ UNRESOLVED ISSUES
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
+- Darn trade() needs to get optimized to maximum potential, bleck. Gonna think about this tonight while I sleep. -Eddy
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
@@ -58,7 +60,7 @@ Eddy :: Worked on Character.java, Player.java in conjunction with Hermano workin
 2017-01-14
 --------------------------------------------------------------
 Hermano :: Moved makeChar() and chooseSupplies() into separate class files, created Family.java, added functionality to Supplies.java
-<Member> :: <Thing member did.>
+Eddy :: Worked on trade() in conjunction with Hermano working on chooseSupplies().
 <Member> :: <Thing member did.>
 ==============================================================
 
