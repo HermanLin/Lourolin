@@ -1,0 +1,70 @@
+Luorolin
+Herman Lin
+Edward Luo
+Edward Ro
+pd 4
+---------------------
+Oregon Trail
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow we so BOSS bc...
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow! oo!...
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+we changed ___ to ___ bc...
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+
+
+2017-01-11
+--------------------------------------------------------------
+Hermano, Eduardo, Eddy :: Wrote/edited proposal. Created UML diagram. Created flowchart.
+==============================================================
+
+2017-01-12
+--------------------------------------------------------------
+Hermano, Eduardo :: Organized work flow. Hashed out nuances.
+Hermano :: Worked on Game.java in conjunction with Eddy working on Character.java.
+Eduardo :: Fixed devlog/added to it, assisted Hermano and Eddy with and edited Game.java, Character.java, and Player.java (java syntax and concept issues).
+Eddy :: Worked on Character.java, Player.java in conjunction with Hermano working on Game.java.
+==============================================================
+
+2017-01-14
+--------------------------------------------------------------
+Hermano :: Moved makeChar() and chooseSupplies() into separate class files, created Family.java, added functionality to Supplies.java
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
