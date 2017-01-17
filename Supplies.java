@@ -18,7 +18,7 @@ public class Supplies {
 	    initStore += "1:\tFood\n";
 	    initStore += "2:\tAmmunition\n";	    
 	    initStore += "3:\tWheels\n";
-	    initStore += "4:\tAxels\n";
+	    initStore += "4:\tAxles\n";
 	    initStore += "5:\tTongues\n";
 	    initStore += "\n6:\tLeave the store";
 	
@@ -27,7 +27,7 @@ public class Supplies {
 	    if ( storeInt == 1 ) { buyFood(); }
 	    else if ( storeInt == 2 ) { buyAmmo(); }
 	    else if ( storeInt == 3 ) { buyWheels(); }
-	    else if ( storeInt == 4 ) {	buyAxels(); }
+	    else if ( storeInt == 4 ) {	buyAxles(); }
 	    else if ( storeInt == 5 ) {	buyTongues(); }
 	    else if ( storeInt == 6 ) { storeBool = false; }
 	    else { System.out.println( "Invalid input" ); }
@@ -76,14 +76,14 @@ public class Supplies {
 	else if ( storeInt > Family.john.getMoney() ) noMoney();	 
     }
 
-    public static void buyAxels() {
-	System.out.println( "Axels go for $12 each" );
+    public static void buyAxles() {
+	System.out.println( "Axles go for $12 each" );
 	System.out.println( "How many axels would you like to buy?" );
 	storeInt = Keyboard.readInt();
 	if ( ( storeInt >= 0 ) && ( storeInt*12 <= Family.john.getMoney() ) ) {
-	    Family.john.addAxels( storeInt );
+	    Family.john.addAxles( storeInt );
 	    Family.john.subMoney( storeInt * 12 );
-	    System.out.println( storeInt + " axels bought" );
+	    System.out.println( storeInt + " axles bought" );
 	}
 	else if ( storeInt < 0 ) noNeg();	    
 	else if ( storeInt > Family.john.getMoney() ) noMoney();	 

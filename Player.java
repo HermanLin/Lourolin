@@ -8,7 +8,7 @@ public class Player extends Character {
     private int food;
     private int ammo;
     private int wheels;
-    private int axels;
+    private int axles;
     private int tongues;
     private int money;
 
@@ -19,7 +19,7 @@ public class Player extends Character {
 	name = x;
 	HP = 100;
 	condition = 0;
-	money = 1500;
+	money = 200;
     }
 
     //======================
@@ -34,8 +34,8 @@ public class Player extends Character {
     public int getWheels() {
 	return wheels;
     }
-    public int getAxels() {
-	return axels;
+    public int getAxles() {
+	return axles;
     }
     public int getTongues() {
 	return tongues;
@@ -56,8 +56,8 @@ public class Player extends Character {
     public void addWheels( int input ) {
 	wheels += input;
     }
-    public void addAxels( int input ) {
-	axels += input;
+    public void addAxles( int input ) {
+	axles += input;
     }
     public void addTongues( int input ) {
 	tongues += input;
@@ -75,8 +75,8 @@ public class Player extends Character {
     public void subWheels( int input ) {
 	wheels -= input;
     }
-    public void subAxels( int input ) {
-	axels -= input;
+    public void subAxles( int input ) {
+	axles -= input;
     }
     public void subTongues( int input ) {
 	tongues -= input;

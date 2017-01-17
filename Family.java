@@ -51,7 +51,7 @@ public class Family {
 	retStr += "Food:\t\t" + john.getFood() + " pounds\n";
 	retStr += "Ammunition:\t" + john.getAmmo() + " bullets\n";
 	retStr += "Wheels:\t\t" + john.getWheels() + " wheels\n";
-	retStr += "Axels:\t\t" + john.getAxels() + " axels\n";
+	retStr += "Axles:\t\t" + john.getAxles() + " axles\n";
 	retStr += "Tongues:\t" + john.getTongues() + " tongues\n";
 	retStr += "Money:\t\t" + john.getMoney() + " dollars\n";
 	return retStr;
