@@ -1,10 +1,10 @@
 # Lourolin
 
-## Launch Instructions
-1) Clone the repository\s\s
-2) Open your terminal\s\s
-3) Compile the game by typing "javac Woo.java"\s\s
-4) Run the game by typing "java Woo"
+## Launch Instructions		
+1) Clone the repository		 
+2) Open your terminal		
+3) Compile the game by typing "javac Woo.java"		
+4) Run the game by typing "java Woo"		
 
 ## Game Description
 Our project is a small recreation of the famous retro game called 
