@@ -7,6 +7,7 @@ public class Trade {
     private static int emigrantWant;
     private static int emigrantTake;
     private static boolean canTrade;
+    private static boolean trading;
     private static String tradeText;    
 
     public static int diffNum( int x ) {
@@ -63,7 +64,7 @@ public class Trade {
 	}
 	
 	if (canTrade) {
-	    tradeText += "The immigrant is willing to trade you ";
+	    tradeText += "The emigrant is willing to trade you ";
 	    if (itemOut == 5) {
 		emigrantTake = (int)((Math.random() * 2) + 1);
 		tradeText += emigrantTake + " tongues.\n";
@@ -87,26 +88,36 @@ public class Trade {
 	}
 	System.out.println (tradeText);
 
-	if (canTrade) {
-	    System.out.println ("Are you willing to trade? ");
-	    String decision = Keyboard.readString();
-	    if (decision.equals( "no" ))
-		return;
-	    else if (decision.equals( "yes" )) {
-		if (itemIn == 1) Family.john.subFood(emigrantWant);
-		else if (itemIn == 2) Family.john.subAmmo(emigrantWant);
-		else if (itemIn == 3) Family.john.subWheels(emigrantWant);
-		else if (itemIn == 4) Family.john.subAxles(emigrantWant);
-		else if (itemIn == 5) Family.john.subTongues(emigrantWant);
+	trading = true;
+	while ( trading ) {
+	    if (canTrade) {
+		System.out.println ("Are you willing to trade? ");
+		String decision = Keyboard.readString();
+		if (decision.equals( "no" )) {
+		    trading = false;
+		    return;
+		}
+		else if (decision.equals( "yes" )) {
+		    if (itemIn == 1) Family.john.subFood(emigrantWant);
+		    else if (itemIn == 2) Family.john.subAmmo(emigrantWant);
+		    else if (itemIn == 3) Family.john.subWheels(emigrantWant);
+		    else if (itemIn == 4) Family.john.subAxles(emigrantWant);
+		    else if (itemIn == 5) Family.john.subTongues(emigrantWant);
 
-		if (itemOut == 1) Family.john.addFood(emigrantTake);
-		else if (itemOut == 2) Family.john.addAmmo(emigrantTake);
-		else if (itemOut == 3) Family.john.addWheels(emigrantTake);
-		else if (itemOut == 4) Family.john.addAxles(emigrantTake);
-		else if (itemOut == 5) Family.john.addTongues(emigrantTake);
+		    if (itemOut == 1) Family.john.addFood(emigrantTake);
+		    else if (itemOut == 2) Family.john.addAmmo(emigrantTake);
+		    else if (itemOut == 3) Family.john.addWheels(emigrantTake);
+		    else if (itemOut == 4) Family.john.addAxles(emigrantTake);
+		    else if (itemOut == 5) Family.john.addTongues(emigrantTake);
+
+		    trading = false;
+		}
+		else { System.out.println( "Invalid input" ); }
 	    }
-	    else { System.out.println( "Invalid input" ); }
+	    else {
+		System.out.println( "You do not have enough supplies" );
+		trading = false;
+	    }
 	}
-	else { System.out.println( "You do not have enough supplies" ); }
     }
 }
