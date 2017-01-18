@@ -11,6 +11,27 @@ public class Game {
     private int nextMiles;
     private int storeInt;
     private boolean storeBool;
+    private int currentMonth;
+    private int currentDate;
+
+    public void setupMonths() {
+	Month January = new Month( 31, 1 );
+	Month February = new Month( 28, 2 );
+	Month March = new Month( 31, 3 );
+	Month April = new Month( 30, 4 );
+	Month May = new Month( 31, 5 );
+	Month June = new Month( 30, 6 );
+	Month July = new Month( 31, 7 );
+	Month August = new Month( 31, 8 );
+	Month September = new Month( 30, 9 );
+	Month October = new Month( 31, 10 );
+	Month November = new Month( 30, 11 );
+	Month December = new Month( 31, 12 );
+    }
+
+    public void chooseStartMonth() {
+    }
+
 
     private String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
 

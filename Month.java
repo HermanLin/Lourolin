@@ -1,8 +1,9 @@
 public class Month {
     private int maxDays;
-    private int currentDay;
+    private int numMonth;
 
-    public String setMonth (int x) {
-	
+    public Month( int max, int num ) {
+	maxDays = max;
+	numMonth = num;
     }
 }

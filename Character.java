@@ -1,5 +1,3 @@
-
-
 public class Character {
 
     //========================
@@ -38,14 +36,15 @@ public class Character {
 	return condition;
     }
 
-    public void setCondition( int input ) {
-	condition = input;
-    }
     public void addHP( int input ) {
 	HP += input;
     }
     public void subHP( int input ) {
 	HP -= input;
+    }
+
+    public void setCondition( int input ) {
+	condition = input;
     }
     public void setName( String input ) {
 	name = input;
