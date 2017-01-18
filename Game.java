@@ -12,6 +12,8 @@ public class Game {
     private int storeInt;
     private boolean storeBool;
 
+    private String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
+
     //=======================   
     //===MAIN GAME METHODS===
     //=======================
@@ -59,29 +61,60 @@ public class Game {
 	    choiceText += "\nWhat would you like to do?\n";
 	    choiceText += "1:\tContinue on the Trail\n";
 	    choiceText += "2:\tCheck on supplies\n";
-	    choiceText += "3:\tRest\n";
-	    choiceText += "4:\tTry to trade with someone\n";
-	    choiceText += "5:\tGo to the store\n";
+	    choiceText += "3:\tCheck on the family\n";
+	    choiceText += "4:\tRest\n";
+	    choiceText += "5:\tTry to trade with someone\n";
+	    choiceText += "6:\tGo to the store\n";
 	    System.out.println(choiceText);
 
 	    storeInt = Keyboard.readInt();
 	    
 	    if ( storeInt == 1 ) {
 		milesTraveled += (int)(Math.random() * 15) + 5;
+		int random = (int)( Math.random() * 4 ) + 1;
+		if (random == 1)
+		    becomeSick( Family.member1 );
+		else if (random == 2)
+		    becomeSick( Family.member2 );
+		else if (random == 3)
+		    becomeSick( Family.member3 );
+		else if (random == 4)
+		    becomeSick( Family.member4 );
 	    }
 	    else if ( storeInt == 2 ) {
 		System.out.println( Family.getSupplies() );
 	    }
 	    else if ( storeInt == 3 ) {
+		System.out.println( Family.getHealth() );
 	    }
 	    else if ( storeInt == 4 ) {
-		Trade.trade();
 	    }
 	    else if ( storeInt == 5 ) {
+		Trade.trade();
+	    }
+	    else if ( storeInt == 6 ) {
 	    }
 	    else {
 		System.out.println( "Invalid input" );
 	    }
 	}
+    }
+
+    private void becomeSick( Character character ) {
+	int rand = (int)( Math.random() * 100 ) + 1;
+	int randCond = (int)( Math.random() * 6 );
+	int randHeal = (int)( Math.random() * 100 ) + 1;
+	if ( character.getCondition() == 0 ) {
+	    if ( rand >= 95 ) {
+		character.setCondition( randCond );
+		System.out.println( character.getName() + " has " + _disease[randCond] );
+	    }
+	}
+	else {
+	    if (randHeal >= 80) {     
+		System.out.println( character.getName() + " no longer has " + _disease[character.getCondition()] );
+		character.setCondition(0);
+	    }
+	}				    
     }
 }
