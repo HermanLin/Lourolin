@@ -32,17 +32,17 @@ public class Game {
 	    
 	    diffChoice = Keyboard.readInt();
 	    
-	    if( diffChoice > 0 && diffChoice > 4 ) {
+	    if( diffChoice > 0 && diffChoice < 4 ) {
 		if( diffChoice == 1 ) {
-		    Family.john.setMoney(150);
+		    Family.john.setMoney(250);
 		} else if( diffChoice == 2 ) {
 		    Family.john.setMoney(200);
 		} else {
-		    Family.john.setMoney(250);
+		    Family.john.setMoney(150);
 		}
 		diffBool = false;
 	    } else {
-		System.out.println( "Invalid input. Please enter a number from 1-4" );
+		System.out.println( "Invalid input. Please enter a number from 1-3" );
 	    }
 	}
     }		    
