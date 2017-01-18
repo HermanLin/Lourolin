@@ -65,7 +65,7 @@ Eddy :: Worked on trade() in conjunction with Hermano working on chooseSupplies(
 
 2017-01-17
 --------------------------------------------------------------
-Hermano :: Debugged trade(), edit README.md, helped debug difficulty implementation
+Hermano :: Debugged trade(), edit README.md, helped debug difficulty implementation, added sickness
 Eduardo :: Added difficulty, added implementation to catch possible errors during setup, added implementation to allow user to change party names.
 Eddy :: Helped Hermano debug trade()
 
