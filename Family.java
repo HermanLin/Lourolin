@@ -9,41 +9,67 @@ public class Family {
     protected static Character member4;
 
     private static String strName;
-    
+	
     public static void makeChars() {
-	//Player creation
-	System.out.println( "What is the name of the wagon leader? " );
-	strName = Keyboard.readString();
-	john = new Player(strName);
+	boolean charBool = true;
+	String procede;
 
-	//Member1 creation
-	System.out.println( "What is the name of your first family member? " );
-	strName = Keyboard.readString();
-	member1 = new Character(strName);
+	john = new Player();
+	member1 = new Character();
+	member2 = new Character();
+	member3 = new Character();
+	member4 = new Character();
 
-	//Member2 creation
-	System.out.println( "What is the name of your second family member? " );
-	strName = Keyboard.readString();
-   	member2 = new Character(strName);
+	while( charBool == true ) {    
+	
+	    //Player creation
+	    System.out.println( "What is the name of the wagon leader? " );
+	    strName = Keyboard.readString();
+	    john.setName(strName);
 
-	//Member3 creation
-	System.out.println( "What is the name of your third family member? " );
-	strName = Keyboard.readString();
-	member3 = new Character(strName);
+	    //Member1 creation
+	    System.out.println( "What is the name of your first family member? " );
+	    strName = Keyboard.readString();
+	    member1.setName(strName);
 
-	//Member4 creation
-	System.out.println( "What is the name of your fourth family member? " );
-	strName = Keyboard.readString();
-	member4 = new Character(strName);
+	    //Member2 creation
+	    System.out.println( "What is the name of your second family member? " );
+	    strName = Keyboard.readString();
+	    member2.setName(strName);
 
-	String outputChars = "";
-	outputChars += "These are the names you chose:\n";
-	outputChars += "1:\t" + john.getName() + "\n";
-	outputChars += "2:\t" + member1.getName() + "\n";
-	outputChars += "3:\t" + member2.getName() + "\n";
-	outputChars += "4:\t" + member3.getName() + "\n";
-	outputChars += "5:\t" + member4.getName() + "\n";
-	System.out.println(outputChars);
+	    //Member3 creation
+	    System.out.println( "What is the name of your third family member? " );
+	    strName = Keyboard.readString();
+	    member3.setName(strName);
+
+	    //Member4 creation
+	    System.out.println( "What is the name of your fourth family member? " );
+	    strName = Keyboard.readString();
+	    member4.setName(strName);
+
+	    String outputChars = "";
+	    outputChars += "These are the names you chose:\n";
+	    outputChars += "1:\t" + john.getName() + "\n";
+	    outputChars += "2:\t" + member1.getName() + "\n";
+	    outputChars += "3:\t" + member2.getName() + "\n";
+	    outputChars += "4:\t" + member3.getName() + "\n";
+	    outputChars += "5:\t" + member4.getName() + "\n";
+	    outputChars += "\nProcede?\n";
+	    System.out.println(outputChars);
+
+	    procede = Keyboard.readString();
+
+	    while( procede.equals( "yes" ) != true && procede.equals( "no" ) != true ) {
+		System.out.println( "Invalid input. Please enter 'yes' or 'no'\n" );
+		System.out.println(outputChars);
+		
+		procede = Keyboard.readString();
+	    }
+	    if( procede.equals( "yes" ) ) {
+		charBool = false;
+	    } else {
+	    }
+	}
     }
 
     public static String getSupplies() {

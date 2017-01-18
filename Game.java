@@ -17,6 +17,37 @@ public class Game {
     //=======================
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      setDifficulty
+      post: sets difficulty, which affects starting money
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    public void setDifficulty() {
+	boolean diffBool = true;
+	int diffChoice;
+	String diffText = "Many kinds of people made the trip to Oregon.\n\nYou may:\n\n";
+	diffText += "1.\t Be a banker from Boston\n";
+	diffText += "2.\t Be a carpenter from Ohio\n";
+	diffText += "3.\t Be a farmer from Illinois\n";
+	while( diffBool == true ) {
+	    System.out.println( diffText );
+	    
+	    diffChoice = Keyboard.readInt();
+	    
+	    if( diffChoice > 0 && diffChoice > 4 ) {
+		if( diffChoice == 1 ) {
+		    Family.john.setMoney(150);
+		} else if( diffChoice == 2 ) {
+		    Family.john.setMoney(200);
+		} else {
+		    Family.john.setMoney(250);
+		}
+		diffBool = false;
+	    } else {
+		System.out.println( "Invalid input. Please enter a number from 1-4" );
+	    }
+	}
+    }		    
+	    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       runGame
       post: runs the main game loop
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

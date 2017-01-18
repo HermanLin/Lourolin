@@ -11,15 +11,25 @@ public class Player extends Character {
     private int axles;
     private int tongues;
     private int money;
+    private int difficulty;
 
     //==================
     //===Constructors===
     //==================
-    public Player(String x) {
-	name = x;
+    public Player() {
 	HP = 100;
 	condition = 0;
-	money = 200;
+        if( difficulty == 1 ) {
+	    money = 250;
+	} else if( difficulty == 2 ) {
+	    money = 200;
+	} else {
+	    money = 150;
+	}
+    }
+    public Player(String x) {
+	this();
+	name = x;        
     }
 
     //======================
@@ -83,5 +93,12 @@ public class Player extends Character {
     }
     public void subMoney( int input ) {
 	money -= input;
+    }
+
+    public void setName( String input ) {
+	name = input;
+    }
+    public void setMoney( int input ) {
+	money = input;
     }
 }

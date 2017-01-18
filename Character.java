@@ -37,4 +37,8 @@ public class Character {
     public int getCondition() {
 	return condition;
     }
+
+    public void setName( String input ) {
+	name = input;
+    }
 }
