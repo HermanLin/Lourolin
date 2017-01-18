@@ -82,5 +82,14 @@ public class Family {
 	retStr += "Money:\t\t" + john.getMoney() + " dollars\n";
 	return retStr;
     }
-    
+
+    public static String getHealth() {
+	String retStr = "";
+	retStr += john.getName() + " :: HP = " + john.getHP() + "\n";
+	retStr += member1.getName() + " :: HP = " + member1.getHP() + ", Condition = " + member1.getCondition() + "\n";
+	retStr += member2.getName() + " :: HP = " + member2.getHP() + ", Condition = " + member2.getCondition() + "\n";
+	retStr += member3.getName() + " :: HP = " + member3.getHP() + ", Condition = " + member3.getCondition() + "\n";
+	retStr += member4.getName() + " :: HP = " + member4.getHP() + ", Condition = " + member4.getCondition() + "\n";	
+	return retStr;
+    }
 }
