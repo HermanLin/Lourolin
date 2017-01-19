@@ -96,7 +96,8 @@ public class Game {
 	while ( milesTraveled < 10000 ) {
 
 	    String choiceText = "";
-	    choiceText += "Miles Traveled: " + milesTraveled;
+	    choiceText += "Miles Traveled: " + milesTraveled + "\n";
+	    choiceText += "Next Landmark: " + nextDestination + "\n";
 	    choiceText += "\nWhat would you like to do?\n";
 	    choiceText += "1:\tContinue on the Trail\n";
 	    choiceText += "2:\tCheck on supplies\n";
