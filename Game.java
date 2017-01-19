@@ -13,7 +13,8 @@ public class Game {
     private boolean storeBool;
     private int currentMonth;
     private int currentDate;
-
+    private String[] landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass"};
+    
     public void setupMonths() {
 	Month January = new Month( 31, 1 );
 	Month February = new Month( 28, 2 );
@@ -32,6 +33,23 @@ public class Game {
     public void chooseStartMonth() {
     }
 
+
+    //========================
+    //=======LANDMARKS========
+    //========================
+    public String nextDestination() {
+	if (milesTraveled < 105) return landmarks[0];
+	else if (milesTraveled < 185) return landmarks[1];
+	else if (milesTraveled < 304) return landmarks[2];
+	else if (milesTraveled < 554) return landmarks[3];
+	else if (milesTraveled < 640) return landmarks[4];
+	else if (milesTraveled < 830) return landmarks[5];
+	else return landmarks[6];
+    }
+
+    public void reachLandmark() {
+	return;
+    }
 
     private String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
 
