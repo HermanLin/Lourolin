@@ -29,7 +29,7 @@ we changed ___ to ___ bc...
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
+A lot of the time, optimizing and bug fixing and all that jazz is more time consuming and difficult than getting the main body to work most of the time.
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -80,7 +80,7 @@ Eddy :: Added Month.java, incorporated destinations into Game
 
 2017-01-19
 --------------------------------------------------------------
-Hermano :: Improved functionality of traveling the trail, implemented nextDestination()n into runGame()
+Hermano :: Improved functionality of traveling the trail, implemented nextDestination() into runGame()
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
