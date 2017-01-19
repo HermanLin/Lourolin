@@ -60,7 +60,7 @@ public class Supplies {
 	    System.out.println( storeInt + " boxes of ammunition bought" );	    
 	}
 	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt*2 > Family.john.getMoney() ) noMoney();	 
     }
 
     public static void buyWheels() {
@@ -73,7 +73,7 @@ public class Supplies {
 	    System.out.println( storeInt + " wheels bought" );
 	}
 	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt*10 > Family.john.getMoney() ) noMoney();	 
     }
 
     public static void buyAxles() {
@@ -86,7 +86,7 @@ public class Supplies {
 	    System.out.println( storeInt + " axles bought" );
 	}
 	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt*12 > Family.john.getMoney() ) noMoney();	 
     }
 
     public static void buyTongues() {
@@ -99,6 +99,6 @@ public class Supplies {
 	    System.out.println( storeInt + " tongues bought" );
 	}
 	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt > Family.john.getMoney() ) noMoney();
+	else if ( storeInt*8 > Family.john.getMoney() ) noMoney();
     }
 }
