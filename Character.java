@@ -62,8 +62,4 @@ public class Character {
     public void subHP( int input ) {
 	HP -= input;
     }
-
-    public void setCondition( int input ) {
-	condition = input;
-    }
 }
