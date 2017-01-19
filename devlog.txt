@@ -75,7 +75,7 @@ Eddy :: Helped Hermano debug trade()
 --------------------------------------------------------------
 Hermano :: Added loseHealth() and rest() methods to Game, added functionality to Character
 Eduardo :: Added time functionality to Game and optimized Month.java
-Eddy :: Added Month.java
+Eddy :: Added Month.java, incorporated destinations into Game
 ==============================================================
 
 yyyy-mm-dd
