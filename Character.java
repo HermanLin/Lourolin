@@ -6,7 +6,7 @@ public class Character {
     protected int HP;
     protected String name;
     protected int condition;
-
+    protected boolean died;
 
     //==================
     //===Constructors===
@@ -14,6 +14,7 @@ public class Character {
     public Character() {
 	HP = 100;
 	condition = 0;
+	died = false;
     }
     public Character(String x) {
 	this();
@@ -61,5 +62,12 @@ public class Character {
     }
     public void subHP( int input ) {
 	HP -= input;
+    }
+
+    public boolean getDied() {
+	return died;
+    }
+    public void setDied( boolean input ) {
+	died = input;
     }
 }
