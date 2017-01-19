@@ -78,6 +78,20 @@ Eduardo :: Added time functionality to Game and optimized Month.java
 Eddy :: Added Month.java, incorporated destinations into Game
 ==============================================================
 
+2017-01-19
+--------------------------------------------------------------
+Hermano :: Improved functionality of traveling the trail, implemented nextDestination()n into runGame()
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
