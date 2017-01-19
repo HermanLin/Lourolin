@@ -92,6 +92,16 @@ public class Game {
 	    
 	    if ( storeInt == 1 ) {
 		milesTraveled += (int)(Math.random() * 15) + 5;
+
+		if (Family.member1.isAlive())
+		    loseHealth(Family.member1);				    
+		if (Family.member2.isAlive())
+		    loseHealth(Family.member2);
+		if (Family.member3.isAlive())
+		    loseHealth(Family.member3);
+		if (Family.member4.isAlive())
+		    loseHealth(Family.member4);
+		
 		int random = (int)( Math.random() * 4 ) + 1;
 		if (random == 1)
 		    becomeSick( Family.member1 );
@@ -109,6 +119,7 @@ public class Game {
 		System.out.println( Family.getHealth() );
 	    }
 	    else if ( storeInt == 4 ) {
+		rest();
 	    }
 	    else if ( storeInt == 5 ) {
 		Trade.trade();
@@ -137,5 +148,51 @@ public class Game {
 		character.setCondition(0);
 	    }
 	}				    
+    }
+
+    private void rest() {       
+	if (Family.john.isAlive()) {
+	    Family.john.subFood(1);
+	    Family.john.addHP(5);
+	    if (Family.john.getHP() > 100)
+		Family.john.setHP(100);
+	}
+	if (Family.member1.isAlive()) {
+	    Family.john.subFood(1);
+	    Family.member1.addHP(5);
+	    if (Family.member1.getHP() > 100)
+		Family.member1.setHP(100);
+	}
+	if (Family.member2.isAlive()) {
+	    Family.john.subFood(1);
+	    Family.member2.addHP(5);
+	    if (Family.member2.getHP() > 100)
+		Family.member2.setHP(100);
+	}
+	if (Family.member3.isAlive()) {
+	    Family.john.subFood(1);
+	    Family.member3.addHP(5);
+	    if (Family.member3.getHP() > 100)
+		Family.member3.setHP(100);
+	}
+	if (Family.member4.isAlive()) {
+	    Family.john.subFood(1);
+	    Family.member4.addHP(5);
+	    if (Family.member4.getHP() > 100)
+		Family.member4.setHP(100);
+	}
+    }
+
+    public void loseHealth(Character character) {
+	if (character.isAlive()) {
+	    if (character.isSick()) {
+		Family.john.subFood(1);
+		character.subHP(4);
+	    }
+	    else {
+		character.subHP(2);
+		Family.john.subFood(1);
+	    }
+	}
     }
 }

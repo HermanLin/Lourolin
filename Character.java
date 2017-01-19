@@ -24,18 +24,38 @@ public class Character {
     //===Methods===
     //=============
     public boolean isAlive() {
-	return HP > 0;
+	if  (HP > 0)
+	    return true;
+	else
+	    return false;
     }
+    public boolean isSick() {
+	if (condition > 0)
+	    return true;
+	else
+	    return false;
+    }
+    
     public String getName() {
 	return name;
     }
-    public int getHP() {
-	return HP;
+    public void setName( String input ) {
+	name = input;
     }
+    
     public int getCondition() {
 	return condition;
     }
-
+    public void setCondition( int input ) {
+	condition = input;
+    }
+    
+    public int getHP() {
+	return HP;
+    }
+    public void setHP( int input ) {
+	HP = input;
+    }
     public void addHP( int input ) {
 	HP += input;
     }
@@ -45,8 +65,5 @@ public class Character {
 
     public void setCondition( int input ) {
 	condition = input;
-    }
-    public void setName( String input ) {
-	name = input;
     }
 }
