@@ -62,6 +62,31 @@ public class Travel {
 	    becomeSick( Family.member3 );
 	else if (random == 4)
 	    becomeSick( Family.member4 );
+
+	if (Family.member1.getDied() == false) {
+	    if (Family.member1.isAlive() == false) {
+		Family.member1.setDied(true);
+		System.out.println("\n" + Family.member1.getName() + " has died...\n");
+	    }
+	}
+	if (Family.member2.getDied() == false) {
+	    if (Family.member2.isAlive() == false) {
+		Family.member2.setDied(true);
+		System.out.println("\n" + Family.member2.getName() + " has died...\n");
+	    }
+	}
+	if (Family.member3.getDied() == false) {
+	    if (Family.member3.isAlive() == false) {
+		Family.member3.setDied(true);
+		System.out.println("\n" + Family.member3.getName() + " has died...\n");
+	    }
+	}	
+	if (Family.member4.getDied() == false) {
+	    if (Family.member4.isAlive() == false) {
+		Family.member4.setDied(true);
+		System.out.println("\n" + Family.member4.getName() + " has died...\n");
+	    }	    
+	}
     }
 
     private static void becomeSick( Character character ) {
