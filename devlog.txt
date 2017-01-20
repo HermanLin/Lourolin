@@ -13,6 +13,7 @@ OBSTACLES OVERCOME
 wow we so BOSS bc...
 
 - Trade() has been fixed at last (thanks Herman :D)
+- Resolved "unfixed wagon issue" 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
