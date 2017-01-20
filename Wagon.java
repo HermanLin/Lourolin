@@ -44,16 +44,6 @@ public class Wagon {
 	}
     }
 
-    public static void wagonFix() {
-	if ((Family.john.getWheels() > 0) &&
-	    (Family.john.getAxles() > 0) &&
-	    (Family.john.getTongues() > 0)) {
-	    wheelBroke = false;
-	    axleBroke = false;
-	    tongueBroke = false;
-	}
-    }
-
     public static void wagonCheck() {
 	while (wheelBroke || axleBroke || tongueBroke) {
 	    if (wheelBroke)
@@ -87,8 +77,13 @@ public class Wagon {
 	    else {
 		System.out.println( "Invalid input" );
 	    }
-	    
-	    wagonFix();
+
+	    if (Family.john.getWheels() > 0)
+		wheelBroke = false;
+	    if (Family.john.getAxles() > 0)
+		axleBroke = false;
+	    if (Family.john.getTongues() > 0)
+		tongueBroke = false;
 	}
     }
 }
