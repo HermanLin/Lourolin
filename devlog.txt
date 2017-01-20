@@ -84,8 +84,8 @@ Eddy :: Added Month.java, incorporated destinations into Game
 2017-01-19
 --------------------------------------------------------------
 Hermano :: Improved functionality of traveling the trail, implemented destinations into game loop; added death messages
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Eduardo :: Started working on choosing the starting month.
+Eddy :: Assisted Eduardo and finished choosing starting month.
 ==============================================================
 
 yyyy-mm-dd
