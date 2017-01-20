@@ -28,9 +28,35 @@ public class Game {
 	Month December = new Month( 31, 12 );
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      chooseStartMonth
+      post: sets starting month of the game
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void chooseStartMonth() {
 	String monthChoose = "It is 1848. Your jumping off place for Oregon is Independence, Missouri. You must decide which month to leave Independence.\n\n";
 	monthChoose += "1.\tMarch\n";
+	monthChoose += "2.\tApril\n";
+	monthChoose += "3.\tMay\n";
+	monthChoose += "4.\tJune\n";
+	monthChoose += "5.\tJuly\n";
+	monthChoose += "6.\tAsk for advice\n\n";
+
+	monthChoose += "What is your choice? ";
+	System.out.print (monthChoose);
+
+	int answer = Keyboard.readInt();
+	if (answer > 6 || answer < 1)
+	    System.out.println ("Out of range, please pick a month or choice #s 1 - 6.");
+	if (answer == 6){
+	    System.out.println ("You attend a public meeting held for ''folks with the California - Oregon fever.'' You're told:\n\n" + "If you leave too early, there won't be any grass for your oxen to eat. If you leave too late, you may not get to Oregon before winter comes. If you leave at just the right time, there will be green grass and the weather will still be cool.\n");
+	    chooseStartMonth();
+	    return;
+	}
+	setMonth(answer);
+    }
+
+    public void setMonth(int x) {
+	currentMonth = x;
     }
 
     //=======================   
