@@ -10,7 +10,7 @@ public class Game {
     private int storeInt;
     private boolean storeBool;
     private int currentMonth;
-    private int currentDate;
+    private int currentDate = 1;
    
     
     public void setupMonths() {
@@ -38,21 +38,18 @@ public class Game {
 	monthChoose += "2.\tApril\n";
 	monthChoose += "3.\tMay\n";
 	monthChoose += "4.\tJune\n";
-	monthChoose += "5.\tJuly\n";
-	monthChoose += "6.\tAsk for advice\n\n";
+	monthChoose += "5.\tJuly\n\n";
 
 	monthChoose += "What is your choice? ";
 	System.out.print (monthChoose);
 
 	int answer = Keyboard.readInt();
-	if (answer > 6 || answer < 1)
-	    System.out.println ("Out of range, please pick a month or choice #s 1 - 6.");
-	if (answer == 6){
-	    System.out.println ("You attend a public meeting held for ''folks with the California - Oregon fever.'' You're told:\n\n" + "If you leave too early, there won't be any grass for your oxen to eat. If you leave too late, you may not get to Oregon before winter comes. If you leave at just the right time, there will be green grass and the weather will still be cool.\n");
-	    chooseStartMonth();
-	    return;
-	}
-	setMonth(answer);
+	while( answer > 5 || answer < 1 ) {
+	    System.out.println ("Out of range, please pick a number from 1-5");
+	    answer = Keyboard.readInt();
+	} 
+    }
+	setMonth( answer + 2 );
     }
 
     public void setMonth(int x) {
