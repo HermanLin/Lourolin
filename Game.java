@@ -7,13 +7,11 @@ public class Game {
     //========================
     private String strName;
     private int difficulty;
-    private int milesTraveled = 0;
-    private int nextMiles;
     private int storeInt;
     private boolean storeBool;
     private int currentMonth;
     private int currentDate;
-    private String[] landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass"};
+   
     
     public void setupMonths() {
 	Month January = new Month( 31, 1 );
@@ -34,26 +32,6 @@ public class Game {
 	String monthChoose = "It is 1848. Your jumping off place for Oregon is Independence, Missouri. You must decide which month to leave Independence.\n\n";
 	monthChoose += "1.\tMarch\n";
     }
-
-
-    //========================
-    //=======LANDMARKS========
-    //========================
-    public String nextDestination() {
-	if (milesTraveled < 105) return landmarks[0];
-	else if (milesTraveled < 185) return landmarks[1];
-	else if (milesTraveled < 304) return landmarks[2];
-	else if (milesTraveled < 554) return landmarks[3];
-	else if (milesTraveled < 640) return landmarks[4];
-	else if (milesTraveled < 830) return landmarks[5];
-	else return landmarks[6];
-    }
-
-    public void reachLandmark() {
-	return;
-    }
-
-    private String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
 
     //=======================   
     //===MAIN GAME METHODS===
@@ -95,11 +73,12 @@ public class Game {
       post: runs the main game loop
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
-	while ( milesTraveled < 10000 ) {
+	while ( Travel.getMilesTraveled() < 830 ) {
 
 	    String choiceText = "";
-	    choiceText += "Miles Traveled: " + milesTraveled + "\n";
-	    choiceText += "Next Landmark: " + nextDestination + "\n";
+	    choiceText += "Miles Traveled: " + Travel.getMilesTraveled() + "\n";
+	    choiceText += "Next Landmark: " + Travel.nextDestination() + "\n";
+	    choiceText += "Miles till Landmark: " + Travel.getNextMiles() + "\n";
 	    choiceText += "\nWhat would you like to do?\n";
 	    choiceText += "1:\tContinue on the Trail\n";
 	    choiceText += "2:\tCheck on supplies\n";
@@ -112,26 +91,8 @@ public class Game {
 	    storeInt = Keyboard.readInt();
 	    
 	    if ( storeInt == 1 ) {
-		milesTraveled += (int)(Math.random() * 15) + 5;
-
-		if (Family.member1.isAlive())
-		    loseHealth(Family.member1);				    
-		if (Family.member2.isAlive())
-		    loseHealth(Family.member2);
-		if (Family.member3.isAlive())
-		    loseHealth(Family.member3);
-		if (Family.member4.isAlive())
-		    loseHealth(Family.member4);
-		
-		int random = (int)( Math.random() * 4 ) + 1;
-		if (random == 1)
-		    becomeSick( Family.member1 );
-		else if (random == 2)
-		    becomeSick( Family.member2 );
-		else if (random == 3)
-		    becomeSick( Family.member3 );
-		else if (random == 4)
-		    becomeSick( Family.member4 );
+		Travel.travelTrail();
+		Travel.runGameChecks();
 	    }
 	    else if ( storeInt == 2 ) {
 		System.out.println( Family.getSupplies() );
@@ -153,47 +114,6 @@ public class Game {
 	}
     }
 
-    private void becomeSick( Character character ) {
-	int rand = (int)( Math.random() * 100 ) + 1;
-	int randCond = (int)( Math.random() * 6 );
-	int randHeal = (int)( Math.random() * 100 ) + 1;
-	if ( character.getCondition() == 0 ) {
-	    if ( rand >= 95 ) {
-		character.setCondition( randCond );
-		System.out.println( character.getName() + " has " + _disease[randCond] );
-	    }
-	}
-	else {
-	    if (randHeal >= 80) {     
-		System.out.println( character.getName() + " no longer has " + _disease[character.getCondition()] );
-		character.setCondition(0);
-	    }
-	}				    
-    }
-
-    public void becomeHealed( Character character ) {
-	int randHeal = (int)( Math.random() * 100 ) + 1;
-	if (character.getCondition() != 0) {
-	    if (randHeal >= 75) {
-		System.out.println( character.getName() + " no longer has " + _disease[character.getCondition()]);
-		character.setCondition(0);
-	    }
-	}
-    }
-
-    public void loseHealth(Character character) {
-	if (character.isAlive()) {
-	    if (character.isSick()) {
-		Family.john.subFood(1);
-		character.subHP(4);
-	    }
-	    else {
-		character.subHP(2);
-		Family.john.subFood(1);
-	    }
-	}
-    }
-    
     private void rest() {       
 	if (Family.john.isAlive()) {
 	    Family.john.subFood(1);
@@ -206,28 +126,28 @@ public class Game {
 	    Family.member1.addHP(5);
 	    if (Family.member1.getHP() > 100)
 		Family.member1.setHP(100);
-	    becomeHealed(Family.member1);
+	    Travel.becomeHealed(Family.member1);
 	}
 	if (Family.member2.isAlive()) {
 	    Family.john.subFood(1);
 	    Family.member2.addHP(5);
 	    if (Family.member2.getHP() > 100)
 		Family.member2.setHP(100);
-	    becomeHealed(Family.member2);
+	    Travel.becomeHealed(Family.member2);
 	}
 	if (Family.member3.isAlive()) {
 	    Family.john.subFood(1);
 	    Family.member3.addHP(5);
 	    if (Family.member3.getHP() > 100)
 		Family.member3.setHP(100);
-	    becomeHealed(Family.member3);
+	    Travel.becomeHealed(Family.member3);
 	}
 	if (Family.member4.isAlive()) {
 	    Family.john.subFood(1);
 	    Family.member4.addHP(5);
 	    if (Family.member4.getHP() > 100)
 		Family.member4.setHP(100);
-	    becomeHealed(Family.member3);
+	    Travel.becomeHealed(Family.member4);
 	}
     }
 }
