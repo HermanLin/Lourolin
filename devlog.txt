@@ -89,6 +89,13 @@ Eduardo :: Started working on choosing the starting month.
 Eddy :: Assisted Eduardo and finished choosing starting month.
 ==============================================================
 
+2017-01-20
+--------------------------------------------------------------
+Hermano :: added wagon breaking and fixing
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
