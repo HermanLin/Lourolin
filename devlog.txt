@@ -19,6 +19,9 @@ UNRESOLVED ISSUES
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
+- Need a way to force the player to stop when an unfixed wagon part is present
+- Need a way to allow Store to be an option only when at a town
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
@@ -80,7 +83,7 @@ Eddy :: Added Month.java, incorporated destinations into Game
 
 2017-01-19
 --------------------------------------------------------------
-Hermano :: Improved functionality of traveling the trail, implemented nextDestination() into runGame()
+Hermano :: Improved functionality of traveling the trail, implemented destinations into game loop; added death messages
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
