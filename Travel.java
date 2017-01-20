@@ -87,6 +87,9 @@ public class Travel {
 		System.out.println("\n" + Family.member4.getName() + " has died...\n");
 	    }	    
 	}
+
+	Wagon.wagonBreak();
+	Wagon.wagonCheck();
     }
 
     private static void becomeSick( Character character ) {

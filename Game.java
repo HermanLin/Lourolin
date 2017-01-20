@@ -140,7 +140,7 @@ public class Game {
 	}
     }
 
-    private void rest() {       
+    public static void rest() {       
 	if (Family.john.isAlive()) {
 	    Family.john.subFood(1);
 	    Family.john.addHP(5);
