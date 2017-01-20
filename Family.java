@@ -54,7 +54,7 @@ public class Family {
 	    outputChars += "3:\t" + member2.getName() + "\n";
 	    outputChars += "4:\t" + member3.getName() + "\n";
 	    outputChars += "5:\t" + member4.getName() + "\n";
-	    outputChars += "\nProcede?\n";
+	    outputChars += "\nProcede?";
 	    System.out.println(outputChars);
 
 	    procede = Keyboard.readString();
