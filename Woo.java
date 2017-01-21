@@ -4,6 +4,7 @@ public class Woo {
 	
 	Game OregonTrail = new Game();
 	OregonTrail.setupMonths();
+	OregonTrail.setupTowns();
 	Family.makeChars();
 	OregonTrail.setDifficulty();
 	OregonTrail.chooseStartMonth();

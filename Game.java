@@ -28,6 +28,11 @@ public class Game {
 	Month December = new Month( 31, 12 );
     }
 
+    public void setupTowns() {
+	Town Kearney = new Town(3, 3, 13, 13, 13, 304);
+	Town Laramie = new Town(3, 3, 15, 15, 15, 640);
+    }
+
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       chooseStartMonth
       post: sets starting month of the game
@@ -47,8 +52,7 @@ public class Game {
 	while( answer > 5 || answer < 1 ) {
 	    System.out.println ("Out of range, please pick a number from 1-5");
 	    answer = Keyboard.readInt();
-	} 
-    }
+	}
 	setMonth( answer + 2 );
     }
 
@@ -96,12 +100,7 @@ public class Game {
       post: runs the main game loop
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
-	while ( Travel.getMilesTraveled() < 830 ) {
-
-	    String choiceText = "";
-	    choiceText += "Miles Traveled: " + Travel.getMilesTraveled() + "\n";
-	    choiceText += "Next Landmark: " + Travel.nextDestination() + "\n";
-	    choiceText += "Miles till Landmark: " + Travel.getNextMiles() + "\n";
+	String choiceText = "";
 	    choiceText += "\nWhat would you like to do?\n";
 	    choiceText += "1:\tContinue on the Trail\n";
 	    choiceText += "2:\tCheck on supplies\n";
@@ -110,6 +109,13 @@ public class Game {
 	    choiceText += "5:\tTry to trade with someone\n";
 	    choiceText += "6:\tGo to the store\n";
 	    System.out.println(choiceText);
+	    
+	while ( Travel.getMilesTraveled() < 830 ) {
+	    String checker = "";
+	    checker += "Miles Traveled: " + Travel.getMilesTraveled() + "\n";
+	    checker += "Next Landmark: " + Travel.nextDestination() + "\n";
+	    checker += "Miles till Landmark: " + Travel.getNextMiles() + "\n";
+	    System.out.println(checker + choiceText);
 
 	    storeInt = Keyboard.readInt();
 	    
@@ -130,6 +136,7 @@ public class Game {
 		Trade.trade();
 	    }
 	    else if ( storeInt == 6 ) {
+		
 	    }
 	    else {
 		System.out.println( "Invalid input" );

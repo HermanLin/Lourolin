@@ -30,6 +30,7 @@ public class Travel {
 	return;
     }
 
+
     public static void travelTrail() {
 	if (10 < nextMiles) {
 	    milesTraveled += 10;

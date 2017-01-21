@@ -91,16 +91,12 @@ Eddy :: Assisted Eduardo and finished choosing starting month.
 
 2017-01-20
 --------------------------------------------------------------
-Hermano :: added wagon breaking and fixing
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Hermano :: Added wagon breaking and fixing.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-21
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Eddy :: Finished most of Town.java and Store.java functionality, made edits in Game.java, Travel.java, added Towns/Forts to Game.
 ==============================================================
 
 yyyy-mm-dd
