@@ -43,7 +43,7 @@ public class Town{
 		Trade.trade();
 	    }
 	    else if ( storeInt == 6 ) {
-		Goods.enterStore();
+	        Store.enterStore();
 	    }
 	    else {
 		System.out.println( "Invalid input" );

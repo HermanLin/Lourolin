@@ -14,6 +14,7 @@ wow we so BOSS bc...
 
 - Trade() has been fixed at last (thanks Herman :D)
 - Resolved "unfixed wagon issue" 
+- Resolved Town not compiling issue
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,6 +23,7 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 - Need a way to force the player to stop when an unfixed wagon part is present
 - Need a way to allow Store to be an option only when at a town
+- Town.java isn't compiling correctly
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,6 +36,7 @@ we changed ___ to ___ bc...
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A lot of the time, optimizing and bug fixing and all that jazz is more time consuming and difficult than getting the main body to work most of the time.
+- Try to plan out your thought processes before coding them. Envision your work.
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -96,6 +99,7 @@ Hermano :: Added wagon breaking and fixing.
 
 2017-01-21
 --------------------------------------------------------------
+Hermano :: Debugged Town, Store, and Travel. 
 Eddy :: Finished most of Town.java and Store.java functionality, made edits in Game.java, Travel.java, added Towns/Forts to Game.
 ==============================================================
 
