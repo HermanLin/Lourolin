@@ -8,12 +8,16 @@ public class Travel {
     private static int markNum = 0;
     private static int nextMiles = _miles[0];
     private static int storeInt;
+    private static int pace = 25;
 
     public static int getMilesTraveled() {
 	return milesTraveled;
     }
     public static int getNextMiles() {
 	return nextMiles;
+    }
+    public static void setPace( int input ) {
+	pace = input;
     }
     
     public static String nextDestination() {
@@ -32,12 +36,12 @@ public class Travel {
 
 
     public static void travelTrail() {
-	if (10 < nextMiles) {
-	    milesTraveled += 10;
-	    nextMiles -= 10;
+	if (pace < nextMiles) {
+	    milesTraveled += pace;
+	    nextMiles -= pace;
 	}
 	else {
-	    storeInt = 10 - nextMiles;
+	    storeInt = pace - nextMiles;
 	    markNum ++;
 	    nextMiles = _miles[markNum];
 	    milesTraveled += storeInt;

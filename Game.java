@@ -9,6 +9,7 @@ public class Game {
     private int difficulty;
     private int storeInt;
     private boolean storeBool;
+    private boolean paceBool;
     private int currentMonth;
     private int currentDate = 1;
    
@@ -98,17 +99,17 @@ public class Game {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       runGame
       post: runs the main game loop
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
 	String choiceText = "";
-	    choiceText += "\nWhat would you like to do?\n";
-	    choiceText += "1:\tContinue on the Trail\n";
-	    choiceText += "2:\tCheck on supplies\n";
-	    choiceText += "3:\tCheck on the family\n";
-	    choiceText += "4:\tRest\n";
-	    choiceText += "5:\tTry to trade with someone\n";
-	    choiceText += "6:\tGo to the store\n";
-	    System.out.println(choiceText);
+	choiceText += "\nWhat would you like to do?\n";
+	choiceText += "1:\tContinue on the Trail\n";
+	choiceText += "2:\tCheck on supplies\n";
+	choiceText += "3:\tCheck on the family\n";
+	choiceText += "4:\tRest\n";
+	choiceText += "5:\tTry to trade with someone\n";
+	choiceText += "6:\tChange your pace\n";
+	System.out.println(choiceText);
 	    
 	while ( Travel.getMilesTraveled() < 830 ) {
 	    String checker = "";
@@ -136,7 +137,7 @@ public class Game {
 		Trade.trade();
 	    }
 	    else if ( storeInt == 6 ) {
-		
+		setPace();
 	    }
 	    else {
 		System.out.println( "Invalid input" );
@@ -178,6 +179,41 @@ public class Game {
 	    if (Family.member4.getHP() > 100)
 		Family.member4.setHP(100);
 	    Travel.becomeHealed(Family.member4);
+	}
+    }
+
+    private void setPace() {
+	String choosePace = "";
+	choosePace += "\nAt what pace would you like to travel?";
+	choosePace += "\n1:\tSteady";
+	choosePace += "\n2:\tStrenuous";
+	choosePace += "\n3:\tGrueling";
+	System.out.println(choosePace);
+
+	storeInt = Keyboard.readInt();
+	paceBool = true;
+	while (paceBool) {
+	    if (storeInt == 1) {
+		Travel.setPace(15);
+		Wagon.setChanceBreak(95);
+		System.out.println("Pace set to 15 miles per day");
+		paceBool = false;
+	    }
+	    else if (storeInt == 2) {
+		Travel.setPace(25);
+		Wagon.setChanceBreak(90);
+		System.out.println("Pace set to 25 miles per day");
+		paceBool = false;
+	    }
+	    else if (storeInt == 3) {
+		Travel.setPace(40);
+		Wagon.setChanceBreak(85);
+		System.out.println("Pace set to 40 miles per day");
+		paceBool = false;
+	    }
+	    else {
+		System.out.println("Invalid input");
+	    }
 	}
     }
 }

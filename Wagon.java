@@ -5,12 +5,17 @@ public class Wagon {
     private static boolean wheelBroke = false;
     private static boolean axleBroke = false;
     private static boolean tongueBroke = false;
-    private static int storeInt; 
+    private static int chanceBreak = 95;
+    private static int storeInt;
+
+    public static void setChanceBreak( int input ) {
+	chanceBreak = input;
+    }
 
     public static void wagonBreak() {
 	int rand = (int)(Math.random() * 100) + 1;
 	int randPart = (int)(Math.random() * 3) + 1;
-	if (rand >= 95) {
+	if (rand >= chanceBreak) {
 	    if (randPart == 1) {
 		if (Family.john.getWheels() > 0) {
 		    Family.john.subWheels(1);
