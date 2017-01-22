@@ -101,9 +101,9 @@ Hermano :: Debugged Town, Store, and Travel. Added pace to Wagon and Travel, imp
 Eddy :: Finished most of Town.java and Store.java functionality, made edits in Game.java, Travel.java, added Towns/Forts to Game.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-22
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Hermano :: Added more landmarks and towns into Travel
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
