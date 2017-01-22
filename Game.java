@@ -34,7 +34,7 @@ public class Game {
       post: sets starting month of the game
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void chooseStartMonth() {
-	String monthChoose = "It is 1848. Your jumping off place for Oregon is Independence, Missouri. You must decide which month to leave Independence.\n\n";
+	String monthChoose = "It is 1848. Your jumping off place for Oregon is Independence, Missouri. \nYou must decide which month to leave Independence.\n\n";
 	monthChoose += "1.\tMarch\n";
 	monthChoose += "2.\tApril\n";
 	monthChoose += "3.\tMay\n";

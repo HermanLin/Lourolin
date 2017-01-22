@@ -126,6 +126,10 @@ public class Travel {
 	    }	    
 	}
 
+	int rand = (int)(Math.random() * 100) + 1;
+	if (rand > 95)
+	    Events.banditAttack();
+	
 	Wagon.wagonBreak();
 	Wagon.wagonCheck();
 	reachLandmark();
