@@ -1,7 +1,7 @@
 public class Travel {
 
-    private static String[] _landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass"};
-    private static int[] _miles = {105, 80, 119, 250, 86, 190};
+    private static String[] _landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger", "Soda Springs", "Fort Hall", "Snake River Crossing", "Fort Boise", "Blue Mountain", "The Dalles", "Fort Walla Walla", "Oregon City"};
+    private static int[] _miles = {102,83,119,250,86,190,102,57,306,100,139,114,160,55,120,187};
     private static String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
 
     private static int milesTraveled = 0;
@@ -21,25 +21,49 @@ public class Travel {
     }
     
     public static String nextDestination() {
-	if (milesTraveled < 105) return _landmarks[0];
+	if (milesTraveled < 102) return _landmarks[0];
 	else if (milesTraveled < 185) return _landmarks[1];
 	else if (milesTraveled < 304) return _landmarks[2];
 	else if (milesTraveled < 554) return _landmarks[3];
 	else if (milesTraveled < 640) return _landmarks[4];
 	else if (milesTraveled < 830) return _landmarks[5];
-	else return _landmarks[6];
+	else if (milesTraveled < 932) return _landmarks[6];
+	else if (milesTraveled < 989) return _landmarks[7];
+	else if (milesTraveled < 1295) return _landmarks[8];
+	else if (milesTraveled < 1395) return _landmarks[9];
+	else if (milesTraveled < 1534) return _landmarks[10];
+	else if (milesTraveled < 1648) return _landmarks[11];
+	else if (milesTraveled < 1808) return _landmarks[12];
+	else if (milesTraveled < 1863) return _landmarks[13];
+	else if (milesTraveled < 1983) return _landmarks[14];
+	else return _landmarks[15];
     }
     
     public static void reachLandmark() {
-	if (milesTraveled == 105) {
-	    System.out.println("\nWelcome to the Kansas River Crossing\n");
-	    Town KansasRiver = new Town(1,2,10,12,8); 
-	    KansasRiver.inTown();
-	}
-	else if (milesTraveled == 304) {
+	if (milesTraveled == 304) {
 	    System.out.println("\nWelcome to Fort Kearney\n");
-	    Town Kearney = new Town(3,3,13,13,13);
+	    Town Kearney = new Town(1,3,13,13,13);
 	    Kearney.inTown();
+	}
+	else if (milesTraveled == 640) {
+	    System.out.println("\nWelcome to Fort Laramie\n");
+	    Town Laramie = new Town(2,3,15,15,15);
+	    Laramie.inTown();
+	}
+	else if (milesTraveled == 989) {
+	    System.out.println("\nWelcome to Fort Bridger\n");
+	    Town Bridger = new Town(3,4,17,17,17);
+	    Bridger.inTown();
+	}
+	else if (milesTraveled == 1648) {
+	    System.out.println("\nWelcome to Fort Boise\n");
+	    Town Boise = new Town(4,5,22,22,22);
+	    Boise.inTown();
+	}
+	else if (milesTraveled == 1983) {
+	    System.out.println("\nWelcome to Fort Walla Walla\n");
+	    Town WallaWalla = new Town(5,6,25,25,25);
+	    WallaWalla.inTown();
 	}
     }
 
