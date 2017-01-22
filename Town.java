@@ -1,17 +1,14 @@
 import cs1.Keyboard;
 
 public class Town{
-    private int mileMarker = 0;
+
+    private static Store Goods;    
+    private static int storeInt;
+    private static boolean stayInTown;
     
-    public Town(int f, int a, int t, int w, int ax, int miles) {
-	Store Goods = new Store(f, a, t, w, ax);
-	mileMarker = miles;
+    public Town(int f, int a, int w, int ax, int t) {
+	Store Goods = new Store(f, a, w, ax, t);
     }
-
-    public int getMileMarker() {
-	return mileMarker;
-    }
-
 
     public static void inTown() {
 	boolean stay = true;
@@ -22,13 +19,13 @@ public class Town{
 	choiceText += "4:\tRest\n";
 	choiceText += "5:\tTry to trade with someone\n";
 	choiceText += "6:\tGo to the store\n";
-	while (stay) {
-	    System.out.println(choiceText);
+	System.out.println(choiceText);
 
-	    int storeInt = Keyboard.readInt();
-	    
+	storeInt = Keyboard.readInt();
+	stayInTown = true;
+	while (stayInTown) {
 	    if ( storeInt == 1 ) {
-		stay = false;
+		stayInTown = false;
 	    }
 	    else if ( storeInt == 2 ) {
 		System.out.println( Family.getSupplies() );
@@ -43,7 +40,7 @@ public class Town{
 		Trade.trade();
 	    }
 	    else if ( storeInt == 6 ) {
-	        Store.enterStore();
+	        Goods.enterStore();
 	    }
 	    else {
 		System.out.println( "Invalid input" );

@@ -29,11 +29,6 @@ public class Game {
 	Month December = new Month( 31, 12 );
     }
 
-    public void setupTowns() {
-	Town Kearney = new Town(3, 3, 13, 13, 13, 304);
-	Town Laramie = new Town(3, 3, 15, 15, 15, 640);
-    }
-
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       chooseStartMonth
       post: sets starting month of the game

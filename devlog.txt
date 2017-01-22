@@ -21,9 +21,7 @@ UNRESOLVED ISSUES
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
-- Need a way to force the player to stop when an unfixed wagon part is present
-- Need a way to allow Store to be an option only when at a town
-- Town.java isn't compiling correctly
+- If you enter the store when in a town, you can't exit the store
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +97,7 @@ Hermano :: Added wagon breaking and fixing.
 
 2017-01-21
 --------------------------------------------------------------
-Hermano :: Debugged Town, Store, and Travel. Added pace to Wagon and Travel; implemented into Game
+Hermano :: Debugged Town, Store, and Travel. Added pace to Wagon and Travel, implemented into Game. Implemented Town and Store into Game
 Eddy :: Finished most of Town.java and Store.java functionality, made edits in Game.java, Travel.java, added Towns/Forts to Game.
 ==============================================================
 

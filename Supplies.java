@@ -20,7 +20,7 @@ public class Supplies {
 	    initStore += "3:\tWheels\n";
 	    initStore += "4:\tAxles\n";
 	    initStore += "5:\tTongues\n";
-	    initStore += "\n6:\tLeave the store";
+	    initStore += "6:\tLeave the store";
 	
 	    System.out.println( initStore );
 	    storeInt = Keyboard.readInt();
@@ -33,9 +33,6 @@ public class Supplies {
 	    else { System.out.println( "Invalid input" ); }
 	}
     }
-
-    public static void noNeg() { System.out.println( "You can't buy a negative number of items" ); }   
-    public static void noMoney() { System.out.println( "Not enough money" ); }
     
     public static void buyFood() {
 	System.out.println( "Food goes for $1 per parcel. 1 parcel contains 10 pounds of food" );
@@ -46,8 +43,8 @@ public class Supplies {
 	    Family.john.subMoney( storeInt );
 	    System.out.println( storeInt + " parcels bought" );
 	}
-	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
+	else if ( storeInt > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
     public static void buyAmmo() {	
@@ -59,8 +56,8 @@ public class Supplies {
 	    Family.john.subMoney( storeInt * 2 );
 	    System.out.println( storeInt + " boxes of ammunition bought" );	    
 	}
-	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt*2 > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
+	else if ( storeInt*2 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
     public static void buyWheels() {
@@ -72,8 +69,8 @@ public class Supplies {
 	    Family.john.subMoney( storeInt * 10 );
 	    System.out.println( storeInt + " wheels bought" );
 	}
-	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt*10 > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
+	else if ( storeInt*10 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
     public static void buyAxles() {
@@ -85,8 +82,8 @@ public class Supplies {
 	    Family.john.subMoney( storeInt * 12 );
 	    System.out.println( storeInt + " axles bought" );
 	}
-	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt*12 > Family.john.getMoney() ) noMoney();	 
+	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
+	else if ( storeInt*12 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
     public static void buyTongues() {
@@ -98,7 +95,7 @@ public class Supplies {
 	    Family.john.subMoney( storeInt * 8 );
 	    System.out.println( storeInt + " tongues bought" );
 	}
-	else if ( storeInt < 0 ) noNeg();	    
-	else if ( storeInt*8 > Family.john.getMoney() ) noMoney();
+	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );
+	else if ( storeInt*8 > Family.john.getMoney() ) System.out.println( "Not enough money" );
     }
 }

@@ -1,5 +1,5 @@
 public class Travel {
-    
+
     private static String[] _landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass"};
     private static int[] _miles = {105, 80, 119, 250, 86, 190};
     private static String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
@@ -29,9 +29,18 @@ public class Travel {
 	else if (milesTraveled < 830) return _landmarks[5];
 	else return _landmarks[6];
     }
-
-    public void reachLandmark() {
-	return;
+    
+    public static void reachLandmark() {
+	if (milesTraveled == 105) {
+	    System.out.println("\nWelcome to the Kansas River Crossing\n");
+	    Town KansasRiver = new Town(1,2,10,12,8); 
+	    KansasRiver.inTown();
+	}
+	else if (milesTraveled == 304) {
+	    System.out.println("\nWelcome to Fort Kearney\n");
+	    Town Kearney = new Town(3,3,13,13,13);
+	    Kearney.inTown();
+	}
     }
 
 
@@ -41,7 +50,7 @@ public class Travel {
 	    nextMiles -= pace;
 	}
 	else {
-	    storeInt = pace - nextMiles;
+	    storeInt = nextMiles;
 	    markNum ++;
 	    nextMiles = _miles[markNum];
 	    milesTraveled += storeInt;
@@ -95,6 +104,7 @@ public class Travel {
 
 	Wagon.wagonBreak();
 	Wagon.wagonCheck();
+	reachLandmark();
     }
 
     private static void becomeSick( Character character ) {
