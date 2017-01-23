@@ -10,7 +10,7 @@ public class Month {
     //========================
     //===INSTANCE VARIABLES===
     //========================
-    private int[] maxDays = new int[12];
+    private static int[] maxDays = new int[12];
     private int[] month = new int[12];
     private String[] monthName = new String[12];
 
@@ -47,5 +47,9 @@ public class Month {
 
     public static int getMaxDays( int month ) {
 	return maxDays[month];
+    }
+
+    public static int getCurrentMonth( int month ) {
+	return monthName[month];
     }
 }

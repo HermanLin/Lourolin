@@ -61,7 +61,11 @@ public class Town{
 		System.out.println( Family.getHealth() );
 	    }
 	    else if ( storeInt == 4 ) {
-		Game.rest();
+		String restMsg = "Rest for how many days?";
+		System.out.println(restMsg);
+
+		int days = Keyboard.readInt();
+		Game.rest(days);
 	    }
 	    else if ( storeInt == 5 ) {
 		Trade.trade();
