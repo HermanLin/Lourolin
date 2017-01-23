@@ -116,6 +116,8 @@ public class Travel {
 	else {
 	    storeInt = nextMiles;
 	    markNum ++;
+	    if (markNum == 16)
+		markNum = 0;
 	    nextMiles = _miles[markNum];
 	    milesTraveled += storeInt;
 	}

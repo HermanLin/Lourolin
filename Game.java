@@ -135,10 +135,13 @@ public class Game {
 	    if( diffChoice > 0 && diffChoice < 4 ) {
 		if( diffChoice == 1 ) {
 		    Family.john.setMoney(250);
+		    difficulty = 1;
 		} else if( diffChoice == 2 ) {
 		    Family.john.setMoney(200);
+		    difficulty = 2;
 		} else {
 		    Family.john.setMoney(150);
+		    difficulty = 3;
 		}
 		diffBool = false;
 	    } else {
