@@ -65,7 +65,7 @@ public class Game {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       setupMonths
       post: creates new objects Month for each month
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     public void setupMonths() {
 	Month January = new Month( 31, 1 );
 	Month February = new Month( 28, 2 );
@@ -79,7 +79,7 @@ public class Game {
 	Month October = new Month( 31, 10 );
 	Month November = new Month( 30, 11 );
 	Month December = new Month( 31, 12 );
-    }
+	}*/
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       chooseStartMonth
@@ -166,6 +166,7 @@ public class Game {
 	    if ( storeInt == 1 ) {
 		Travel.travelTrail();
 		Travel.runGameChecks();
+		changeDay(1);
 	    }
 	    else if ( storeInt == 2 ) {
 		System.out.println( Family.getSupplies() );
@@ -193,7 +194,12 @@ public class Game {
       rest
       post: adds health to family members, takes food away for each member
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    public static void rest() {       
+    public static void rest( int days ) {
+	
+	String restMsg = "Rest for how many days?";
+	System.out.println(restMsg);
+
+	days = Keyboard.readInt();
 	if (Family.john.isAlive()) {
 	    Family.john.subFood(1);
 	    Family.john.addHP(5);
@@ -228,6 +234,7 @@ public class Game {
 		Family.member4.setHP(100);
 	    Travel.becomeHealed(Family.member4);
 	}
+	changeDay(days);
     }
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -266,6 +273,18 @@ public class Game {
 	    else {
 		System.out.println("Invalid input");
 	    }
+	}
+    }
+
+    public void changeDay( int days ) {
+	if( currentDate > Month.getMaxDays(currentMonth) ) {
+	    currentDate = 1;
+	    currentDate += days - 1;
+	    if( currentMonth > 12 ) {
+		currentMonth = 1;
+	    }
+	} else {
+	    currentDate += days;
 	}
     }
 
