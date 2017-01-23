@@ -15,13 +15,12 @@ wow we so BOSS bc...
 - Trade() has been fixed at last (thanks Herman :D)
 - Resolved "unfixed wagon issue" 
 - Resolved Town not compiling issue
+- Resolved not being able to exit the store when in a Town
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
-
-- If you enter the store when in a town, you can't exit the store
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,6 +34,7 @@ LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A lot of the time, optimizing and bug fixing and all that jazz is more time consuming and difficult than getting the main body to work most of the time.
 - Try to plan out your thought processes before coding them. Envision your work.
+- When debugging, it's helpful to draw out what happens as your code runs
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -103,7 +103,7 @@ Eddy :: Finished most of Town.java and Store.java functionality, made edits in G
 
 2017-01-22
 --------------------------------------------------------------
-Hermano :: Added more landmarks and towns into Travel, added bandit attacks, added start menu
+Hermano :: Added more landmarks and towns into Travel, added bandit attacks, added start menu, debugged Town loop
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
