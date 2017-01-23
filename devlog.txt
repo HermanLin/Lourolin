@@ -109,3 +109,32 @@ Eddy :: Finished most of Town.java and Store.java functionality, made edits in G
 Hermano :: Added more landmarks and towns into Travel, added bandit attacks, added start menu, debugged Town loop, added endGame to Game, added selling option to Store, added special image to start
 Eduardo :: Scrapepd old date system, implemented new one. Rest now takes a certain number of days, sepcified by player.
 ==============================================================
+
+2017-01-23
+--------------------------------------------------------------
+Hermano :: Debugged supplies, win conditions
+==============================================================
+
+=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=VERSION 1.0=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=
+
+yyyy-mm-dd
+--------------------------------------------------------------
+
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+
+==============================================================
+ 
+yyyy-mm-dd
+--------------------------------------------------------------
+
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+
+==============================================================
