@@ -24,10 +24,6 @@ public class Game {
     //===METHODS===
     //=============
 
-    public void pressToContinue() {
-	try { System.in.read(); }
-	catch( Exception e) {}
-    }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       startUp
       post: prints start up messages
@@ -36,25 +32,22 @@ public class Game {
 	System.out.println("\n\t...A Stuyvesant Student Production...\n\n\n");
 	try { Thread.sleep(2000); }
 	catch( InterruptedException e) { Thread.currentThread().interrupt(); }
-	System.out.println("\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-	System.out.println("\t-=-=Welcome to the Oregon Trail=-=-");
-	System.out.println("\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-	System.out.println("\n\t1:\tTravel the Trail");
-	System.out.println("\t2:\tCredits");
 
-	storeInt = Keyboard.readInt();
 	startUpBool = true;
 	while (startUpBool) {
+	    System.out.println("\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+	    System.out.println("\t-=-=Welcome to the Oregon Trail=-=-");
+	    System.out.println("\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+	    System.out.println("\n\t1:\tTravel the Trail");
+	    System.out.println("\t2:\tCredits");
+	    
+	    storeInt = Keyboard.readInt();
 	    if (storeInt == 1)
 		startUpBool = false;
 	    else if (storeInt == 2) {
-		System.out.println("\t=-=-=-=-=-=-=-=");
-		System.out.println("\t-=-=Credits=-=-");
-		System.out.println("\t=-=-=-=-=-=-=-=");
-		System.out.println("Programmers:");
-		System.out.println("Herman Lin, Edward Luo, Edward Ro");
-		System.out.println("\nPress ENTER to go back to the main menu");
-		pressToContinue();
+		System.out.println("\t\t-=-=Credits=-=-");
+		System.out.println("\tProgrammers:");
+		System.out.println("\tHerman Lin, Edward Luo, Edward Ro\n\n");
 	    }
 	    else System.out.println("Invalid input");
 	}
