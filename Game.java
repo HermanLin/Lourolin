@@ -212,35 +212,35 @@ public class Game {
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void rest( int days ) {
 	if (Family.john.isAlive()) {
-	    Family.john.subFood(1);
-	    Family.john.addHP(5);
+	    Family.john.subFood(1 * days);
+	    Family.john.addHP(5 * days);
 	    if (Family.john.getHP() > 100)
 		Family.john.setHP(100);
 	}
 	if (Family.member1.isAlive()) {
-	    Family.john.subFood(1);
-	    Family.member1.addHP(5);
+	    Family.john.subFood(1 * days);
+	    Family.member1.addHP(5 * days);
 	    if (Family.member1.getHP() > 100)
 		Family.member1.setHP(100);
 	    Travel.becomeHealed(Family.member1);
 	}
 	if (Family.member2.isAlive()) {
-	    Family.john.subFood(1);
-	    Family.member2.addHP(5);
+	    Family.john.subFood(1 * days);
+	    Family.member2.addHP(5 * days);
 	    if (Family.member2.getHP() > 100)
 		Family.member2.setHP(100);
 	    Travel.becomeHealed(Family.member2);
 	}
 	if (Family.member3.isAlive()) {
-	    Family.john.subFood(1);
-	    Family.member3.addHP(5);
+	    Family.john.subFood(1 * days);
+	    Family.member3.addHP(5 * days);
 	    if (Family.member3.getHP() > 100)
 		Family.member3.setHP(100);
 	    Travel.becomeHealed(Family.member3);
 	}
 	if (Family.member4.isAlive()) {
-	    Family.john.subFood(1);
-	    Family.member4.addHP(5);
+	    Family.john.subFood(1 * days);
+	    Family.member4.addHP(5 * days);
 	    if (Family.member4.getHP() > 100)
 		Family.member4.setHP(100);
 	    Travel.becomeHealed(Family.member4);
