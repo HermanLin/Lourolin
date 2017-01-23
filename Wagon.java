@@ -111,15 +111,15 @@ public class Wagon {
 	    }
 
 	    //checks whether or not the player can fix the wagon
-	    if (Family.john.getWheels() > 0) {
+	    if (Family.john.getWheels() > 0 && wheelBroke) {
 		wheelBroke = false;
 		Family.john.subWheels(1);
 	    }
-	    if (Family.john.getAxles() > 0) {		
+	    if (Family.john.getAxles() > 0 && axleBroke) {		
 		axleBroke = false;
 		Family.john.subAxles(1);
 	    }
-	    if (Family.john.getTongues() > 0) {		
+	    if (Family.john.getTongues() > 0 && tongueBroke) {		
 		tongueBroke = false;
 		Family.john.subTongues(1);
 	    }
