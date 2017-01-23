@@ -97,7 +97,11 @@ public class Wagon {
 		System.out.println( Family.getHealth() );
 	    }
 	    else if ( storeInt == 3 ) {
-		Game.rest();
+		String restMsg = "Rest for how many days?";
+		System.out.println(restMsg);
+
+		int days = Keyboard.readInt();
+		Game.rest(days);
 	    }
 	    else if ( storeInt == 4 ) {
 		Trade.trade();

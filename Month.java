@@ -44,4 +44,8 @@ public class Month {
 	monthName[10] = "November";
 	monthName[11] = "December";
     }
+
+    public static int getMaxDays( int month ) {
+	return maxDays[month];
+    }
 }

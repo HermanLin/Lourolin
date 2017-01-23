@@ -17,8 +17,8 @@ public class Game {
     private boolean storeBool;
     private boolean startUpBool;
     private boolean paceBool;
-    private int currentMonth;
-    private int currentDate = 1;
+    private static int currentMonth;
+    private static int currentDate = 1;
 
     //=============
     //===METHODS===
