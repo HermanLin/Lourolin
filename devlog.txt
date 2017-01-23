@@ -23,6 +23,7 @@ blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
 - Sometimes the health goes past 0
+- If resting more than the number of days in a month, it doesn't go to the next month until you travel
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
