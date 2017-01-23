@@ -10,6 +10,9 @@ public class Woo {
 	//creates a new object OregonTrail
 	Game OregonTrail = new Game();
 
+	//startup menu	
+	OregonTrail.startUp();
+	
 	//run methods before game loop starts...
 	OregonTrail.setupMonths();	
 	Family.makeChars();
