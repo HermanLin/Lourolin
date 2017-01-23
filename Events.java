@@ -24,8 +24,10 @@ public class Events {
 	    randFood = (int)(Math.random() * Family.john.getFood());
 	if (Family.john.getAmmo() > 100)
 	    randAmmo = (int)(Family.john.getAmmo() / ((Math.random() * 15) + 10));
-	else
-	    randAmmo = (int)(Math.random() * Family.john.getAmmo());
+	else if (Family.john.getAmmo() == 0) {
+	    rand = 4;
+	    randAmmo = (int)(Math.random() * Family.john.getAmmo() + 1);
+	}
 	int randWheel = (int)(Math.random() * Family.john.getWheels());
 	int randAxle = (int)(Math.random() * Family.john.getAxles());
 	int randTongue = (int)(Math.random() * Family.john.getTongues());
