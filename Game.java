@@ -24,15 +24,24 @@ public class Game {
     //===METHODS===
     //=============
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      waitTime
+      pre: input number of milliseconds
+      post: waits input number of seconds
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    public void waitTime( int input ) {
+	try { Thread.sleep(input); }
+	catch( InterruptedException e) { Thread.currentThread().interrupt(); }
+    }
+    
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       startUp
       post: prints start up messages
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void startUp() {
 	System.out.println("\n\t...A Stuyvesant Student Production...\n\n\n");
-	try { Thread.sleep(2000); }
-	catch( InterruptedException e) { Thread.currentThread().interrupt(); }
-
+	waitTime(2000);
+	
 	startUpBool = true;
 	while (startUpBool) {
 	    System.out.println("\t=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -145,7 +154,7 @@ public class Game {
 	choiceText += "6:\tChange your pace\n";
 	System.out.println(choiceText);
 	    
-	while ( Travel.getMilesTraveled() < 830 ) {
+	while ( Travel.getMilesTraveled() < 2170 ) {
 	    String checker = "";
 	    checker += "Miles Traveled: " + Travel.getMilesTraveled() + "\n";
 	    checker += "Next Landmark: " + Travel.nextDestination() + "\n";
@@ -177,6 +186,7 @@ public class Game {
 		System.out.println( "Invalid input" );
 	    }
 	}
+	endGame();
     }
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -257,5 +267,61 @@ public class Game {
 		System.out.println("Invalid input");
 	    }
 	}
+    }
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      endGame
+      post: runs end game message and calculates points
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    public void endGame() {
+	int johnHPTotal = Family.john.getHP()*10;
+	int member1HPTotal = Family.member1.getHP()*10;
+	int member2HPTotal = Family.member2.getHP()*10;
+	int member3HPTotal = Family.member3.getHP()*10;
+	int member4HPTotal = Family.member4.getHP()*10;
+	int foodTotal = Family.john.getFood()*25;
+	int ammoTotal = Family.john.getAmmo()*50;
+	int wheelTotal = Family.john.getWheels()*2;
+	int axleTotal = Family.john.getAxles()*2;
+	int tongueTotal = Family.john.getTongues()*2;
+	int moneyTotal = Family.john.getMoney()*5;
+	int sumTotal = johnHPTotal + member1HPTotal + member2HPTotal + member3HPTotal + member4HPTotal + foodTotal + ammoTotal + wheelTotal + axleTotal + tongueTotal + moneyTotal;
+	System.out.println("Congratulations! You have made it to Oregon City!");
+	System.out.println("Let's see how many points you have received...");
+	waitTime(1000);
+	System.out.println(Family.john.getName() + "'s Health:\t" + Family.john.getHP() + " x 10\t=" + johnHPTotal);
+	waitTime(500);
+	System.out.println(Family.member1.getName() + "'s Health:\t" + Family.member1.getHP() + " x 10\t\t=" + member1HPTotal);
+	waitTime(500);
+	System.out.println(Family.member2.getName() + "'s Health:\t" + Family.member2.getHP() + " x 10\t\t=" + member2HPTotal);
+	waitTime(500);
+	System.out.println(Family.member3.getName() + "'s Health:\t" + Family.member3.getHP() + " x 10\t\t=" + member3HPTotal);
+	waitTime(500);
+	System.out.println(Family.member4.getName() + "'s Health:\t" + Family.member4.getHP() + " x 10\t\t=" + member4HPTotal);
+	waitTime(500);
+	System.out.println("Food:\t\t" + Family.john.getFood() + " x 25\t=" + foodTotal);
+	waitTime(500);
+	System.out.println("Ammo:\t\t" + Family.john.getAmmo() + " x 50\t=" + ammoTotal);
+	waitTime(500);
+	System.out.println("Wheels:\t\t" + Family.john.getWheels() + " x 2\t\t=" + wheelTotal);
+	waitTime(500);
+	System.out.println("Axles:\t\t" + Family.john.getAxles() + " x 2\t\t=" + axleTotal);
+	waitTime(500);
+	System.out.println("Tongues:\t" + Family.john.getTongues() + " x 2\t\t=" + tongueTotal);
+	waitTime(500);
+	System.out.println("Money:\t\t" + Family.john.getMoney() + " x 5\t\t=" + moneyTotal);
+	waitTime(500);
+	System.out.println("Sum of Points:\t" + sumTotal);
+	waitTime(500);
+	System.out.println("\nOccupation Bonus:\tx" + difficulty);
+	waitTime(500);
+	System.out.println("\nTOTAL POINTS:\t" + sumTotal*difficulty);
+	waitTime(500);
+	System.out.println("");
+	waitTime(500);
+	System.out.println("");
+	waitTime(500);
+	System.out.println("");	
+	System.out.println("...Thanks for Traveling Along the Oregon Trail!...");
     }
 }
