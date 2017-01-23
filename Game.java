@@ -169,6 +169,9 @@ public class Game {
 	    else if ( storeInt == 6 ) {
 		setPace();
 	    }
+	    else if ( storeInt == 0 ) {
+		Family.john.addMoney(100);
+	    }
 	    else {
 		System.out.println( "Invalid input" );
 	    }
