@@ -1,8 +1,9 @@
-# Luorolin
+# Luorolin		
+# Oregon Trail
 
 ## Launch Instructions		
-1) Clone the repository		 
-2) Open your terminal		
+1) Open your terminal		 
+2) Clone the repository		
 3) Compile the game by typing "javac Woo.java"		
 4) Run the game by typing "java Woo"		
 
