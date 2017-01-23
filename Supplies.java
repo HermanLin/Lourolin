@@ -25,20 +25,19 @@ public class Supplies {
     public static void chooseSupplies() {	 	 
 	System.out.println( "In order to make it to Oregon City, you'll need supplies" );
 	System.out.print( "\nYou head to a store nearby to gather some necessities..." );
-
+	String initStore = "";
+	initStore += "\nWelcome to the General Store! What would you like to buy?\n";
+	initStore += "\n" + Family.getSupplies() + "\n";
+	initStore += "Amount of Money Left:\t" + Family.john.getMoney() + "\n";
+	initStore += "1:\tFood\n";
+	initStore += "2:\tAmmunition\n";	    
+	initStore += "3:\tWheels\n";
+	initStore += "4:\tAxles\n";
+	initStore += "5:\tTongues\n";
+	initStore += "6:\tLeave the store";
+	
 	storeBool = true;
 	while ( storeBool == true ) {
-	    String initStore = "";
-	    initStore += "\nWelcome to the General Store! What would you like to buy?\n";
-	    initStore += "\n" + Family.getSupplies() + "\n";
-	    initStore += "Amount of Money Left:\t" + Family.john.getMoney() + "\n";
-	    initStore += "1:\tFood\n";
-	    initStore += "2:\tAmmunition\n";	    
-	    initStore += "3:\tWheels\n";
-	    initStore += "4:\tAxles\n";
-	    initStore += "5:\tTongues\n";
-	    initStore += "6:\tLeave the store";
-	
 	    System.out.println( initStore );
 	    storeInt = Keyboard.readInt();
 	    if ( storeInt == 1 ) { buyFood(); }

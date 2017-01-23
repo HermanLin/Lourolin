@@ -46,11 +46,11 @@ public class Town{
 	choiceText += "4:\tRest\n";
 	choiceText += "5:\tTry to trade with someone\n";
 	choiceText += "6:\tGo to the store\n";
-	System.out.println(choiceText);
 
-	storeInt = Keyboard.readInt();
 	stayInTown = true;
 	while (stayInTown) {
+	    System.out.println(choiceText);
+	    storeInt = Keyboard.readInt();
 	    if ( storeInt == 1 ) {
 		stayInTown = false;
 	    }
