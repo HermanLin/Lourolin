@@ -14,7 +14,6 @@ public class Woo {
 	OregonTrail.startUp();
 	
 	//run methods before game loop starts...
-	OregonTrail.setupMonths();	
 	Family.makeChars();
 	OregonTrail.setDifficulty();
 	OregonTrail.chooseStartMonth();

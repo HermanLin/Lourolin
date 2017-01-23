@@ -12,7 +12,7 @@ public class Month {
     //========================
     private int[] maxDays = new int[12];
     private int[] month = new int[12];
-    private String[] monthName = new int[12];
+    private String[] monthName = new String[12];
 
     //==================
     //===CONSTRUCTORS===
