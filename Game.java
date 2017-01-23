@@ -1,3 +1,9 @@
+/*||||||||||||||||||||||||||||||||||||||||||
+  GAME CLASS
+  This is the main class that runs the other
+  classes in one main game loop
+  ||||||||||||||||||||||||||||||||||||||||*/
+
 import cs1.Keyboard;
 
 public class Game {
@@ -12,8 +18,23 @@ public class Game {
     private boolean paceBool;
     private int currentMonth;
     private int currentDate = 1;
-   
+
+    //=============
+    //===METHODS===
+    //=============
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      startUp
+      post: prints start up messages
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    public void startUp() {
+	
+    }
     
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      setupMonths
+      post: creates new objects Month for each month
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void setupMonths() {
 	Month January = new Month( 31, 1 );
 	Month February = new Month( 28, 2 );
@@ -29,10 +50,10 @@ public class Game {
 	Month December = new Month( 31, 12 );
     }
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       chooseStartMonth
       post: sets starting month of the game
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void chooseStartMonth() {
 	String monthChoose = "It is 1848. Your jumping off place for Oregon is Independence, Missouri. \nYou must decide which month to leave Independence.\n\n";
 	monthChoose += "1.\tMarch\n";
@@ -56,14 +77,10 @@ public class Game {
 	currentMonth = x;
     }
 
-    //=======================   
-    //===MAIN GAME METHODS===
-    //=======================
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       setDifficulty
       post: sets difficulty, which affects starting money
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void setDifficulty() {
 	boolean diffBool = true;
 	int diffChoice;
@@ -94,7 +111,7 @@ public class Game {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       runGame
       post: runs the main game loop
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
 	String choiceText = "";
 	choiceText += "\nWhat would you like to do?\n";
@@ -140,6 +157,10 @@ public class Game {
 	}
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      rest
+      post: adds health to family members, takes food away for each member
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void rest() {       
 	if (Family.john.isAlive()) {
 	    Family.john.subFood(1);
@@ -177,6 +198,10 @@ public class Game {
 	}
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      setPace
+      post: changes how far the player travels every day
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private void setPace() {
 	String choosePace = "";
 	choosePace += "\nAt what pace would you like to travel?";

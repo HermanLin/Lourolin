@@ -1,15 +1,35 @@
+/*||||||||||||||||||||||||||||||||||||||||
+  TRAVEL CLASS
+  Contains the various methods needed when
+  the player "continues on the trail"
+  Contains the towns along the trail 
+  and the distance traveled, between
+  towns, and the distance left till towns
+  Also contains the diseases that can
+  affect Characters
+  ||||||||||||||||||||||||||||||||||||||*/
+
 public class Travel {
 
+    //============
+    //===ARRAYS===
+    //============
     private static String[] _landmarks = {"Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", "Fort Laramie", "Independence Rock", "South Pass", "Fort Bridger", "Soda Springs", "Fort Hall", "Snake River Crossing", "Fort Boise", "Blue Mountain", "The Dalles", "Fort Walla Walla", "Oregon City"};
     private static int[] _miles = {102,83,119,250,86,190,102,57,306,100,139,114,160,55,120,187};
     private static String[] _disease = {"exhaustion", "cholera", "dysntery", "measles", "typhoid", "fever"};
 
+    //========================
+    //===INSTANCE VARIABLES===
+    //========================
     private static int milesTraveled = 0;
     private static int markNum = 0;
     private static int nextMiles = _miles[0];
     private static int storeInt;
     private static int pace = 25;
 
+    //=============
+    //===METHODS===
+    //=============
     public static int getMilesTraveled() {
 	return milesTraveled;
     }
@@ -19,7 +39,12 @@ public class Travel {
     public static void setPace( int input ) {
 	pace = input;
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      nextDestination
+      post: returns the next landmark along the trail
+            based on _landmarks
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static String nextDestination() {
 	if (milesTraveled < 102) return _landmarks[0];
 	else if (milesTraveled < 185) return _landmarks[1];
@@ -38,7 +63,12 @@ public class Travel {
 	else if (milesTraveled < 1983) return _landmarks[14];
 	else return _landmarks[15];
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      reachLandmark
+      post: creates Towns if player reaches a town landmark
+      post: runs methods in Town
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void reachLandmark() {
 	if (milesTraveled == 304) {
 	    System.out.println("\nWelcome to Fort Kearney\n");
@@ -67,7 +97,10 @@ public class Travel {
 	}
     }
 
-
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      travelTrail
+      post: adds distance traveled, subtracts distance left
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void travelTrail() {
 	if (pace < nextMiles) {
 	    milesTraveled += pace;
@@ -81,7 +114,14 @@ public class Travel {
 	}
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      runGameChecks
+      post: runs the main if statements that are needed when the
+            player "continues on the trail"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void runGameChecks() {
+
+	//if the family member is alive, sub health
 	if (Family.member1.isAlive())
 	    loseHealth(Family.member1);				    
 	if (Family.member2.isAlive())
@@ -90,7 +130,8 @@ public class Travel {
 	    loseHealth(Family.member3);
 	if (Family.member4.isAlive())
 	    loseHealth(Family.member4);
-		
+
+	//if the family is alive, make them sick based on random
 	int random = (int)( Math.random() * 4 ) + 1;
 	if (random == 1)
 	    becomeSick( Family.member1 );
@@ -101,6 +142,7 @@ public class Travel {
 	else if (random == 4)
 	    becomeSick( Family.member4 );
 
+	//if the family member dies, say so once
 	if (Family.member1.getDied() == false) {
 	    if (Family.member1.isAlive() == false) {
 		Family.member1.setDied(true);
@@ -126,15 +168,24 @@ public class Travel {
 	    }	    
 	}
 
+	//runs random bandit attack event
 	int rand = (int)(Math.random() * 100) + 1;
 	if (rand > 95)
 	    Events.banditAttack();
-	
+
+	//runs random wagon breaking and fixing
 	Wagon.wagonBreak();
 	Wagon.wagonCheck();
+
+	//checks if player has reached a town
 	reachLandmark();
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      becomeSick
+      pre: takes a Character character
+      post: randomly makes Character sick
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     private static void becomeSick( Character character ) {
 	int rand = (int)( Math.random() * 100 ) + 1;
 	int randCond = (int)( Math.random() * 6 );
@@ -153,6 +204,11 @@ public class Travel {
 	}				    
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      becomeHealed
+      pre: takes a Character and if the character is sick
+      post: removes sickness from the Character
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void becomeHealed( Character character ) {
 	int randHeal = (int)( Math.random() * 100 ) + 1;
 	if (character.getCondition() != 0) {
@@ -163,11 +219,17 @@ public class Travel {
 	}
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      loseHealth
+      pre: takes a Character character and is alive
+      post: takes health from Character based on whether 
+            they are sick or not, takes food
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void loseHealth(Character character) {
 	if (character.isAlive()) {
 	    if (character.isSick()) {
 		Family.john.subFood(1);
-		character.subHP(4);
+		character.subHP(5);
 	    }
 	    else {
 		character.subHP(2);

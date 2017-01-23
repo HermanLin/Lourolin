@@ -1,3 +1,11 @@
+/* |||||||||||||||||||||||||||||||||||||||||
+   CHARACTER CLASS
+   Allows for the creation of family members
+   of type Character with accessor and 
+   mutator methods to get the Character's 
+   stats
+   |||||||||||||||||||||||||||||||||||||||*/
+
 public class Character {
 
     //========================

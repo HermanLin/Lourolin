@@ -1,10 +1,27 @@
+/*|||||||||||||||||||||||||||||||||||||||||
+  SUPPLIES CLASS
+  Contains methods for supply buying at the
+  start of the game
+  |||||||||||||||||||||||||||||||||||||||*/
+
 import cs1.Keyboard;
 
 public class Supplies {
 
+    //========================
+    //===INSTANCE VARIABLES===   
+    //========================
     private static boolean storeBool;
     private static int storeInt = 0;    
-    
+
+    //=============
+    //===METHODS===
+    //=============
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      chooseSupplies
+      post: runs the choosing supplies blurb
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void chooseSupplies() {	 	 
 	System.out.println( "In order to make it to Oregon City, you'll need supplies" );
 	System.out.print( "\nYou head to a store nearby to gather some necessities..." );
@@ -33,7 +50,11 @@ public class Supplies {
 	    else { System.out.println( "Invalid input" ); }
 	}
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyFood
+      post: runs the buying food prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyFood() {
 	System.out.println( "Food goes for $1 per parcel. 1 parcel contains 10 pounds of food" );
 	System.out.println( "How many parcels would you like to buy?" );
@@ -47,6 +68,10 @@ public class Supplies {
 	else if ( storeInt > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyAmmo
+      post: runs the buying ammo prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyAmmo() {	
 	System.out.println( "Ammo goes for $2 per box of bullets. 1 box contains 20 bullets" );
 	System.out.println( "How many boxes would you like to buy?" );
@@ -60,6 +85,10 @@ public class Supplies {
 	else if ( storeInt*2 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyWheels
+      post: runs the buying wheels prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyWheels() {
 	System.out.println( "Wheels go for $10 each" );
 	System.out.println( "How many wheels would you like to buy?" );
@@ -73,6 +102,10 @@ public class Supplies {
 	else if ( storeInt*10 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyAxles
+      post: runs the buying axles prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyAxles() {
 	System.out.println( "Axles go for $12 each" );
 	System.out.println( "How many axels would you like to buy?" );
@@ -86,6 +119,10 @@ public class Supplies {
 	else if ( storeInt*12 > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyTongues
+      post: runs the buying tongues prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyTongues() {
 	System.out.println( "Tongues go for $8 each" );
 	System.out.println( "How many tongues would you like to buy?" );

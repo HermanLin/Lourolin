@@ -1,7 +1,20 @@
+/*||||||||||||||||||||||||||||||||||||||
+  STORE CLASS
+  Allows for the creation of objects of
+  type Store
+  Contains methods for stores only found
+  in towns. The stores are able to have 
+  different prices as allowed by the 
+  constructors
+  ||||||||||||||||||||||||||||||||||||*/
+
 import cs1.Keyboard;
 
 public class Store {
-    
+
+    //========================
+    //===INSTANCE VARIABLES===
+    //========================
     private static int foodP;
     private static int ammoP;
     private static int wheelsP;
@@ -11,6 +24,9 @@ public class Store {
     private static int storeInt;
     private static boolean storeBool;
 
+    //==================
+    //===CONSTRUCTORS===
+    //==================
     public Store(int f, int a, int w, int ax, int t) {
 	foodP = f;
 	ammoP = a;
@@ -18,7 +34,15 @@ public class Store {
 	axlesP = ax;
 	tonguesP = t;
     }
-    
+
+    //=============
+    //===METHODS===
+    //=============
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      enterStore
+      post: runs the store methods when in towns
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void enterStore() {
 	storeBool = true;
 	while (storeBool) {
@@ -46,6 +70,10 @@ public class Store {
 	return;
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyFood
+      post: runs the buying food prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyFood() {
 	System.out.println( "Food goes for $" + foodP + " per parcel. 1 parcel contains 10 pounds of food" );
 	System.out.println( "How many parcels would you like to buy?" );
@@ -58,7 +86,11 @@ public class Store {
 	else if ( storeInt < 0 ) System.out.println("You can't buy a negative number of items");	    
 	else if ( (storeInt * foodP) > Family.john.getMoney() ) System.out.println("Not enough money");
     }
-	
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyAmmo
+      post: runs the buying ammo prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyAmmo() {
 	System.out.println( "Ammo goes for $" + ammoP + " per box of bullets. 1 box contains 20 bullets" );
 	System.out.println( "How many boxes would you like to buy?" );
@@ -72,6 +104,10 @@ public class Store {
 	else if ( (storeInt * ammoP) > Family.john.getMoney() ) System.out.println("Not enough money");
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyWheels
+      post: runs the buying wheels prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyWheels() {
 	System.out.println( "Wheels go for $" + wheelsP + " each" );
 	System.out.println( "How many wheels would you like to buy?" );
@@ -84,7 +120,11 @@ public class Store {
 	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
 	else if ( (storeInt * wheelsP) > Family.john.getMoney() ) System.out.println( "Not enough money" );
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyAxles
+      post: runs the buying axles prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void buyAxles() {
 	System.out.println( "Axles go for $" + axlesP + " each" );
 	System.out.println( "How many axels would you like to buy?" );
@@ -97,7 +137,11 @@ public class Store {
 	else if ( storeInt < 0 ) System.out.println( "You can't buy a negative number of items" );	    
 	else if ( (storeInt * axlesP) > Family.john.getMoney() ) System.out.println( "Not enough money" );	 
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      buyTongues
+      post: runs the buying tongues prompt
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/    
     public static void buyTongues() {
 	System.out.println( "Tongues go for $" + tonguesP + " each" );
 	System.out.println( "How many tongues would you like to buy?" );

@@ -1,3 +1,12 @@
+/*|||||||||||||||||||||||||||||||||||||||||||
+  PLAYER CLASS
+  Implements Character so that the player has
+  the same stats as the rest of the family
+  Contains all of the variables for the 
+  supplies as well as accessor and mutator
+  methods to those variables
+  |||||||||||||||||||||||||||||||||||||||||*/
+
 public class Player extends Character {
 
     //========================
@@ -17,13 +26,6 @@ public class Player extends Character {
     public Player() {
 	HP = 100;
 	condition = 0;
-        if( difficulty == 1 ) {
-	    money = 250;
-	} else if( difficulty == 2 ) {
-	    money = 200;
-	} else {
-	    money = 150;
-	}
     }
     public Player(String x) {
 	this();

@@ -1,7 +1,17 @@
+/*|||||||||||||||||||||||||||||||||||||
+  TRADE CLASS
+  Contains variables and methods that 
+  allows the player to trade with other
+  emigrants along the trail
+  |||||||||||||||||||||||||||||||||||*/
+
 import cs1.Keyboard;
 
 public class Trade {
 
+    //========================
+    //===INSTANCE VARIABLES===
+    //========================
     private static int itemIn;
     private static int itemOut;
     private static int emigrantWant;
@@ -10,6 +20,15 @@ public class Trade {
     private static boolean trading;
     private static String tradeText;    
 
+    //=============
+    //===METHODS===
+    //=============
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      diffNum
+      pre: takes a number x
+      post: returns a number different from x
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static int diffNum( int x ) {
 	int rand = (int)( Math.random() * 5 ) + 1;
 	while ( rand == x ) {
@@ -17,7 +36,11 @@ public class Trade {
 	}
 	return rand;
     }
-    
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~
+      trade
+      post: runs the trade blurb
+      ~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void trade() {
 	itemIn = (int)( Math.random() * 5 ) + 1;
 	itemOut = diffNum( itemIn );
@@ -26,6 +49,7 @@ public class Trade {
 	canTrade = true;
 	tradeText = "An emmigrant wants ";
 
+	//randomizes what the emigrant wants from the player
 	System.out.println( Family.getSupplies() );
 	if (itemIn == 5) {
 	    emigrantWant = (int)((Math.random() * 3) + 1);
@@ -62,7 +86,9 @@ public class Trade {
 		canTrade = false;
 	    }
 	}
-	
+
+	//if the player has what the emigrant wants, the emigrant
+	//will offer something in return
 	if (canTrade) {
 	    tradeText += "The emigrant is willing to trade you ";
 	    if (itemOut == 5) {
@@ -88,15 +114,20 @@ public class Trade {
 	}
 	System.out.println (tradeText);
 
+	//initiates trading
 	trading = true;
 	while ( trading ) {
 	    if (canTrade) {
 		System.out.println ("Are you willing to trade? ");
 		String decision = Keyboard.readString();
+
+		//if the player doesnt want to trade...
 		if (decision.equals( "no" )) {
 		    trading = false;
 		    return;
 		}
+		
+		//if the player wants to trade...
 		else if (decision.equals( "yes" )) {
 		    if (itemIn == 1) Family.john.subFood(emigrantWant);
 		    else if (itemIn == 2) Family.john.subAmmo(emigrantWant);
@@ -114,6 +145,8 @@ public class Trade {
 		}
 		else { System.out.println( "Invalid input" ); }
 	    }
+
+	    //if the player doesnt have what the emigrant wants...
 	    else {
 		System.out.println( "You do not have enough supplies" );
 		trading = false;

@@ -1,15 +1,37 @@
+/*||||||||||||||||||||||||||||||||||||||||||
+  FAMILY CLASS
+  Contains methods for character creation at 
+  the start of the game, as well as methods
+  that show supplies and health
+  ||||||||||||||||||||||||||||||||||||||||*/
+
 import cs1.Keyboard;
 
 public class Family {
 
+    //=============
+    //===OBJECTS===
+    //=============
     protected static Player john;
     protected static Character member1;
     protected static Character member2;
     protected static Character member3;
     protected static Character member4;
 
+    //========================
+    //===INSTANCE VARIABLES===
+    //========================
     private static String strName;
-	
+
+    //=============
+    //===METHODS===
+    //=============
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      makeChars
+      post: runs the character creation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
     public static void makeChars() {
 	boolean charBool = true;
 	String procede;
@@ -59,6 +81,7 @@ public class Family {
 
 	    procede = Keyboard.readString();
 
+	    //if you choose the wrong name...
 	    while( procede.equals( "yes" ) != true && procede.equals( "no" ) != true ) {
 		System.out.println( "Invalid input. Please enter 'yes' or 'no'\n" );
 		System.out.println(outputChars);
@@ -72,6 +95,10 @@ public class Family {
 	}
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      getSupplies
+      post: returns player's supplies
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static String getSupplies() {
 	String retStr = "";
 	retStr += "Food:\t\t" + john.getFood() + " pounds\n";
@@ -83,6 +110,10 @@ public class Family {
 	return retStr;
     }
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      getHealth
+      post: returns player's and family's health
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static String getHealth() {
 	String retStr = "";
 	retStr += john.getName() + " :: HP = " + john.getHP() + "\n";

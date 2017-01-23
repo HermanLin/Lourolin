@@ -1,5 +1,15 @@
+/*||||||||||||||||||||||||||||||||||||||||||||
+  EVENTS CLASS
+  Contains the methods for various events that
+  are to take place within the game
+  ||||||||||||||||||||||||||||||||||||||||||*/
+
 public class Events {
 
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      banditAttack
+      post: runs the bandit event
+      ~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void banditAttack() {
 	String banditStr = "";
 	banditStr += "\nBandits have ambushed you on the trail.\n";
