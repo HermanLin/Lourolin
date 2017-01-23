@@ -126,7 +126,7 @@ public class Game {
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
 	String choiceText = "";
-	choiceText += "The date is " + Month.getCurrentMonth(currentMonth) + " " + currentDate;
+	choiceText += "The date is " + Month.getCurrentMonth( currentMonth - 1 ) + " " + currentDate;
 	choiceText += "\nWhat would you like to do?\n";
 	choiceText += "1:\tContinue on the Trail\n";
 	choiceText += "2:\tCheck on supplies\n";
@@ -263,7 +263,7 @@ public class Game {
       post: changes currentDate and currentMonth as necessary
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void changeDay( int days ) {
-	if( currentDate > Month.getMaxDays(currentMonth) ) {
+	if( currentDate > Month.getMaxDays( currentMonth - 1 ) ) {
 	    currentDate = 1;
 	    currentDate += days - 1;
 	    if( currentMonth > 12 ) {
