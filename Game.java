@@ -126,7 +126,7 @@ public class Game {
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public void runGame() {
 	String choiceText = "";
-	chocieText += "The date is " + Month.getCurrentMonth(currentMonth) + " " currentDate;
+	choiceText += "The date is " + Month.getCurrentMonth(currentMonth) + " " + currentDate;
 	choiceText += "\nWhat would you like to do?\n";
 	choiceText += "1:\tContinue on the Trail\n";
 	choiceText += "2:\tCheck on supplies\n";
