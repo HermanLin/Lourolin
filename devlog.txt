@@ -103,7 +103,7 @@ Eddy :: Finished most of Town.java and Store.java functionality, made edits in G
 
 2017-01-22
 --------------------------------------------------------------
-Hermano :: Added more landmarks and towns into Travel, added bandit attacks
+Hermano :: Added more landmarks and towns into Travel, added bandit attacks, added start menu
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
