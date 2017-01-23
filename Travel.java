@@ -70,9 +70,16 @@ public class Travel {
       post: runs methods in Town
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public static void reachLandmark() {
+	//FOR DEMONSTRATION
+	if (milesTraveled == 102) {
+	    System.out.println("\nWelcome to the Kansas River Crossing\n");
+	    Town KansasRiver = new Town(2,2,10,10,10);
+	    KansasRiver.inTown();
+	}
+	//Acutal Towns
 	if (milesTraveled == 304) {
 	    System.out.println("\nWelcome to Fort Kearney\n");
-	    Town Kearney = new Town(1,3,13,13,13);
+	    Town Kearney = new Town(2,3,13,13,13);
 	    Kearney.inTown();
 	}
 	else if (milesTraveled == 640) {
