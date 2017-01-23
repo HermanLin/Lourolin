@@ -16,8 +16,8 @@ public class Events {
 	banditStr += "You take out your gun to try to defend your wagon\n";
 	
 	int rand = (int)(Math.random() * 5);
-	int randFood;
-	int randAmmo;
+	int randFood = 0;
+	int randAmmo = 0;
 	if (Family.john.getFood() > 500)
 	    randFood = (int)(Family.john.getFood() / ((Math.random() * 15) + 10));
 	else
