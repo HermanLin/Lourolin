@@ -22,8 +22,9 @@ UNRESOLVED ISSUES
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
-- Sometimes the health goes past 0
-- If resting more than the number of days in a month, it doesn't go to the next month until you travel
+- Health can go below 0
+- If resting more than the number of days left in a month, it doesn't go to the next month until you travel
+- Food and ammunition can go below 0
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
